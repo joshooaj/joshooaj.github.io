@@ -10,6 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: |
-          ./build.ps1 -Task Deploy -Token ${GH_TOKEN}
+          ./build.ps1 -Task Deploy
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }} 
