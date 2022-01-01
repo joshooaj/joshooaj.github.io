@@ -4,7 +4,7 @@ site_description: "The personal blog of Josh Hendricks."
 site_dir: Output/
 repo_name: joshooaj/joshooaj.github.io
 repo_url: https://github.com/joshooaj/joshooaj.github.io
-edit_uri: edit/master/docs/
+edit_uri: edit/main/docs/
 docs_dir: docs
 copyright: Copyright &copy; 2021 Joshua Hendricks. All rights reserved.
 

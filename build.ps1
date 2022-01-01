@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
     [Parameter()]
-    [ValidateSet('Serve', 'Build', 'Deploy')]
+    [ValidateSet('Serve', 'Build')]
     [string]
     $Task = 'Serve',
 
@@ -10,13 +10,9 @@ param(
     $UseInsiders
 )
 
-& docker login -u joshooaj -p $($env:GH_TOKEN) ghcr.io
+docker pull ghcr.io/joshooaj/mkdocs-material-insiders:latest
 
 switch ($Task) {
-    'Deploy' {
-        docker run --rm -v $PWD`:/docs ghcr.io/joshooaj/mkdocs-material-insiders:latest gh-deploy --config-file mkdocs.insiders.yml --force
-    }
-
     'Serve' {
         if ($UseInsiders) {
             docker run --rm -it -p 8000:8000 -v $PWD`:/docs ghcr.io/joshooaj/mkdocs-material-insiders:latest serve --config-file mkdocs.insiders.yml --dev-addr 0.0.0.0:8000
