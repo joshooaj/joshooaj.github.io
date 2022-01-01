@@ -1,0 +1,5 @@
+INHERIT: mkdocs.yml
+plugins:
+  - search
+  - social:
+      cards_font: Open Sans

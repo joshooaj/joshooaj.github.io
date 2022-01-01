@@ -1,0 +1,59 @@
+site_name: Josh's Tech Notes
+site_description: "The personal blog of Josh Hendricks."
+site_dir: Output/
+docs_dir: docs
+copyright: Copyright &copy; 2021 Joshua Hendricks. All rights reserved.
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  logo: assets/images/joshooaj.png
+  features:
+    - header.autohide
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - content.code.annotate
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/joshooaj
+      name: Josh on Twitter
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/joshooaj
+      name: Josh on LinkedIn
+    - icon: fontawesome/brands/github
+      link: https://github.com/joshooaj
+      name: Josh on GitHub
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path:
+      - docs
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
+  - md_in_html
