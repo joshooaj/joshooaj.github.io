@@ -10,7 +10,7 @@ param(
     $UseInsiders
 )
 
-& docker login -u joshooaj -p $env:GH_TOKEN ghcr.io
+& docker login -u joshooaj -p $($env:GH_TOKEN) ghcr.io
 
 switch ($Task) {
     'Deploy' {
