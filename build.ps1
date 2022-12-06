@@ -11,7 +11,9 @@ param(
 )
 
 docker pull ghcr.io/joshooaj/mkdocs-material-insiders:latest
-
+if (Test-Path -Path .\.cache) {
+    Remove-Item .\.cache -Recurse -Force
+}
 switch ($Task) {
     'Serve' {
         if ($UseInsiders) {

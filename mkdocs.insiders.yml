@@ -1,5 +1,22 @@
 INHERIT: mkdocs.yml
 plugins:
+  - meta
+  - blog:
+      blog_dir: .
+      draft_if_future_date: true
+      draft_on_serve: true
+      post_excerpt: required
+      post_slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - rss:
+      match_path: blog/posts/.* 
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
+
   - search
   - social:
       cards_font: Open Sans

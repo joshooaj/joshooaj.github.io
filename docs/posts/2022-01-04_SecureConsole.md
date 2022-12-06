@@ -1,16 +1,16 @@
 ---
-title: Securely Reading Passwords from the Console
-summary: How to prompt users for sensitive information like passwords without displaying the characters.
 date: 2022-01-04
 authors:
-    - Josh Hendricks
-tags:
-    - C#
+ - joshooaj
+categories:
+  - C#
 ---
 
 # Securely Reading Passwords from the Console
 
 If you've ever written a console application which requires the user to enter sensitive information like a password or a token, you might have wrestled with concerns of exposing the password in plain text within the console window.
+
+<!-- more -->
 
 I was writing a new console application earlier today after spending most of my time in PowerShell for the last three years, and I found myself wanting to use `Read-Host -AsSecureString`, and remembered how much I take for granted that PowerShell gives us so much for free.
 

@@ -1,4 +1,4 @@
-site_name: Josh's Tech Notes
+site_name: JoshooaJ
 site_url: https://joshooaj.github.io/
 site_description: "The personal blog of Josh Hendricks."
 site_dir: Output/
@@ -6,7 +6,11 @@ repo_name: joshooaj/joshooaj.github.io
 repo_url: https://github.com/joshooaj/joshooaj.github.io
 edit_uri: edit/main/docs/
 docs_dir: docs
-copyright: Copyright &copy; 2021 Joshua Hendricks. All rights reserved.
+copyright: Copyright &copy; 2021-2022 Joshua Hendricks. All rights reserved.
+
+nav:
+  - about.md
+  - index.md
 
 theme:
   name: material
@@ -23,10 +27,6 @@ theme:
   logo: assets/images/joshooaj.png
   features:
     - header.autohide
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.sections
-    - navigation.expand
     - content.code.annotate
 
 plugins:
@@ -46,6 +46,7 @@ extra:
       name: Josh on GitHub
 
 markdown_extensions:
+  - abbr
   - admonition
   - pymdownx.highlight
   - pymdownx.inlinehilite
