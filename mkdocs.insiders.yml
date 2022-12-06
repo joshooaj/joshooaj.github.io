@@ -3,7 +3,6 @@ plugins:
   - meta
   - blog:
       blog_dir: .
-      draft_if_future_date: true
       draft_on_serve: true
       post_excerpt: required
       post_slugify: !!python/object/apply:pymdownx.slugs.slugify
