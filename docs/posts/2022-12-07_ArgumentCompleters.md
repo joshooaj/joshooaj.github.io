@@ -201,34 +201,47 @@ in the `$args` automatic variable. In this relatively simple use case, we only
 need the value from `$wordToComplete`, but here's a quick breakdown of each
 argument...
 
-- commandName: this will be the full name of the command for which the completer
-  has been invoked.
-- parameterName: this is the name of the parameter for which completion is being
-  requested. This may seem strange since you can only specify a single parameter
-  name with `Register-ArgumentCompleter` but there's nothing stopping you from
-  storing the scriptblock in a variable and re-using it across different commands
-  and even different parameter names. Since the scriptblock will receive the
-  parameter name, you could leverage that to stay "DRY" - as in, "Don't Repeat Yourself"
-  by entering the same or very similar code multiple times.
-- wordToComplete: This will be either an empty string or one or more characters.
-  and if there are single or double quotes at the start and/or end of the word,
-  they will be present in this variable. For this reason you may notice that the
-  first thing I do with this value is trim either single, or double quotes from
-  the ends.
-- commandAst: This is an "abstract syntax tree" which is an abstract
-  representation of the command that the user is preparing to run, including the
-  string content of the entire pipeline. I have not waded into the deep waters
-  of abstract syntax trees yet, but there is great strength in being able to
-  "look around" the command being typed by the user. I recommend using the
-  debugger to step _into_ an argument completer scriptblock sometime so you can
-  explore this argument at runtime.
-- fakeBoundParameters: This is a hashtable where the keys are the other
-  parameters, if any, that the user has specified for the same command. If the
-  values the completer should return might be modified by the presence or value
-  of another parameter, this enables you to augment those results accordingly.
-  For example, if `Get-ChildItem -Directory -Path ` has been typed, it doesn't
-  make sense for PowerShell to suggest any file names. The completions for `Path`
-  should be exclusively directories.
+`$commandName`
+
+:   The full name of the command for which the completer has been invoked.
+
+`$parameterName`
+
+:   The name of the parameter for which completion is being requested. This may
+    seem strange since you can only specify a single parameter name with
+    `Register-ArgumentCompleter` but there's nothing stopping you from storing
+    the scriptblock in a variable and re-using it across different commands and
+    even different parameter names. Since the scriptblock will receive the
+    parameter name, you could leverage that to stay "DRY" - as in, [Don't Repeat
+    Yourself](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) by entering
+    the same, or very similar code many times.
+
+`$wordToComplete`
+
+:   Either an empty string or one or more characters. If there are single or
+    double quotes at the start and/or end of the word, they will be present in
+    the value of this variable.
+
+`$commandAst`
+
+:   This is an "abstract syntax tree" which is an abstract representation of
+    the command that the user is preparing to run, including the string content
+    of the entire pipeline. I have not waded into the deep waters of abstract
+    syntax trees yet, but there is great strength in being able to "look around"
+    the command being typed by the user. I recommend using the debugger to step
+    _into_ an argument completer scriptblock sometime so you can explore this
+    argument at runtime.
+
+`$fakeBoundParameters`
+
+:   A hashtable where the keys are the other parameters, if any, that the user
+    has specified for the same command. If the values the completer should
+    return might be modified by the presence or value of another parameter, this
+    enables you to augment those results accordingly. For example, if
+    `Get-ChildItem -Directory -Path ` has been typed, it doesn't make sense for
+    PowerShell to suggest any file names. The completions for `Path` should be
+    exclusively directories. But there's no _guarantee_ that when the user runs
+    the command, any of these "fake bound parameters" will still be present.
 
 After the `param()` declaration, a short regular expression is used to check
 whether `$wordToComplete` begins with either a single, or a double quote. If it
