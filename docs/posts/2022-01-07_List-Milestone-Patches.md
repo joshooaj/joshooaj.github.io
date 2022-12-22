@@ -58,7 +58,3 @@ If you have more than a handful of servers in your Milestone VMS infrastructure,
 - Silent install and uninstall (/install /quiet)
 - List installed patches (registry, powershell)
 - Check for latest available patches (hard)
-
-## Final thoughts
-
-I love lamp.
