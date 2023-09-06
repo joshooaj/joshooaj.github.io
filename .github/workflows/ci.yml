@@ -13,7 +13,7 @@ jobs:
         with:
           python-version: 3.x
           fetch-depth: 0
-      - run: pip install git+https://${GH_TOKEN}@github.com/joshooaj/mkdocs-material-insiders.git@custom
+      - run: pip install -U -r requirements.txt -r user-requirements.txt git+https://${GH_TOKEN}@github.com/joshooaj/mkdocs-material-insiders.git@custom
       - run: mkdocs gh-deploy --config-file mkdocs.insiders.yml --force
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }} 
