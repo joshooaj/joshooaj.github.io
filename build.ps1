@@ -32,11 +32,9 @@ switch ($Task) {
     }
 
     'Publish' {
-        if ($UseInsiders) {
-            docker run -v $PWD`:/docs ghcr.io/joshooaj/mkdocs-material-insiders gh-deploy --force --config-file mkdocs.insiders.yml
-        } else {
-            docker run -v $PWD`:/docs ghcr.io/joshooaj/mkdocs-material-insiders gh-deploy --force
-        }
+        ${env:GHCR_TOKEN} | docker login -u joshooaj --password-stdin ghcr.io
+        docker pull ghcr.io/joshooaj/mkdocs-material-insiders:latest
+        docker run -v $PWD`:/docs ghcr.io/joshooaj/mkdocs-material-insiders gh-deploy --force --config-file mkdocs.insiders.yml
     }
     Default {}
 }
