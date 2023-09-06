@@ -1,12 +1,13 @@
 ---
-date: 2022-12-07
+date:
+  created: 2022-12-07
 authors:
  - joshooaj
 categories:
   - PowerShell
   - Usability
 links:
-  - Download Get-ParentProcess.ps1: posts/ArgumentCompleters/Get-ParentProcess.ps1
+  - Download Get-ParentProcess.ps1: blog/posts/ArgumentCompleters/Get-ParentProcess.ps1
 ---
 
 # Your users deserve argument completers
@@ -54,7 +55,7 @@ name and ID of the original process, and the name and ID of the parent process.
 Why? Because this would be a useful function for me so why not? 😁
 
 ```powershell linenums="1"
---8<-- "posts/ArgumentCompleters/Get-ParentProcess.ps1::84"
+--8<-- "blog/posts/ArgumentCompleters/Get-ParentProcess.ps1::84"
 ```
 
 Go ahead and try this function out by copying and pasting it into a PowerShell,
@@ -88,7 +89,7 @@ multiple matching processes with the same name, and that the completions should
 be surrounded with single quotes if the name contains any spaces.
 
 ```powershell linenums="1"
---8<-- "posts/ArgumentCompleters/Get-ParentProcess.ps1:85:103"
+--8<-- "blog/posts/ArgumentCompleters/Get-ParentProcess.ps1:85:103"
 ```
 
 The `CommandName` and `ParameterName` parameters and values provided to
@@ -177,7 +178,7 @@ simplify how we return the values in the end, because there's no need to wrap
 the values with quotes.
 
 ```powershell linenums="1"
---8<-- "posts/ArgumentCompleters/Get-ParentProcess.ps1:104:"
+--8<-- "blog/posts/ArgumentCompleters/Get-ParentProcess.ps1:104:"
 ```
 
 We start by attempting to coerce the string value of `$wordToComplete` into an
@@ -209,5 +210,5 @@ completer and explore the `$commandAst` argument to see how you might be able
 to use it in your projects.
 
 ```powershell linenums="1"
---8<-- "posts/ArgumentCompleters/Get-ParentProcess.ps1"
+--8<-- "blog/posts/ArgumentCompleters/Get-ParentProcess.ps1"
 ```

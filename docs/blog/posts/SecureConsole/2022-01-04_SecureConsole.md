@@ -1,9 +1,10 @@
 ---
-date: 2022-01-04
+date:
+  created: 2022-01-04
 authors:
  - joshooaj
 categories:
-  - C#
+  - C\#
 ---
 
 # Securely Reading Passwords from the Console
@@ -23,7 +24,7 @@ Here's what I ended up with. The `SecureConsole.ReadLine()` method will...
 3. write an asterisk (*) symbol back to the console
 4. accept the backspace key and behave as expected
 
-![Demonstration of the console application showing the password obscured with asterisks.](/assets/images/SecureConsoleDemo.gif)
+![Demonstration of the console application showing the password obscured with asterisks.](./SecureConsoleDemo.gif)
 
 Here's the `SecureConsole` class, and a demo program where I'm calling `SecureConsole.GetCredential()` to prompt the user for their credentials. The password will be recorded as a `SecureString` and then paired with the username to create a `System.Net.NetworkCredential`. For testing purposes, the plain text password from the credential is printed out to verify the text was received properly. Read on after the code sample for details.
 

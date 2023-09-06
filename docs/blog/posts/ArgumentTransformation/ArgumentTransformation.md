@@ -1,12 +1,13 @@
 ---
-date: 2022-12-21
+date:
+  created: 2022-12-21
 authors:
  - joshooaj
 categories:
   - PowerShell
   - Usability
 links:
-  - Download Get-VmsHardware.ps1: posts/ArgumentTransformation/Get-VmsHardware.ps1
+  - Download Get-VmsHardware.ps1: blog/posts/ArgumentTransformation/Get-VmsHardware.ps1
 ---
 
 # Argument Transformation Attributes
@@ -74,7 +75,7 @@ transformation, but PowerShell's own parameter binding and handling of null or
 invalid types is already so good. Why reinvent the wheel?
 
 ```powershell linenums="1"
---8<-- "posts/ArgumentTransformation/Get-VmsHardware.ps1::35"
+--8<-- "blog/posts/ArgumentTransformation/Get-VmsHardware.ps1::35"
 ```
 
 ## Using the argument transform in Get-VmsHardware
@@ -86,7 +87,7 @@ definition of `#!powershell Get-VmsHardware` below, the highlighted line was
 the only change required for the function to accept recording servers by name.
 
 ```powershell linenums="1" hl_lines="5"
---8<-- "posts/ArgumentTransformation/Get-VmsHardware.ps1:36:76"
+--8<-- "blog/posts/ArgumentTransformation/Get-VmsHardware.ps1:36:76"
 ```
 
 1. This attribute is the _only_ change required to the `#!powershell Get-VmsHardware`
@@ -107,7 +108,7 @@ below, the user will be able to tab or list-complete values for the
 instead of an object, but _easy_!
 
 ```powershell linenums="1"
---8<-- "posts/ArgumentTransformation/Get-VmsHardware.ps1:77:"
+--8<-- "blog/posts/ArgumentTransformation/Get-VmsHardware.ps1:77:"
 ```
 
 ![List completion of the RecordingServer parameter](ArgCompleterListCompletion.png)
@@ -137,7 +138,7 @@ because PowerShell doesn't attempt to invoke the argument completer script block
 until you have typed the associated command and parameter.
 
 ```powershell linenums="1"
---8<-- "posts/ArgumentTransformation/Get-VmsHardware.ps1"
+--8<-- "blog/posts/ArgumentTransformation/Get-VmsHardware.ps1"
 ```
 
 1. This attribute is the _only_ change required to the `#!powershell Get-VmsHardware`

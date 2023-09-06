@@ -9,8 +9,8 @@ docs_dir: docs
 copyright: Copyright &copy; 2021-2022 Joshua Hendricks. All rights reserved.
 
 nav:
-  - about.md
   - index.md
+  - blog/index.md
 
 theme:
   name: material
@@ -28,10 +28,11 @@ theme:
   features:
     - header.autohide
     - content.code.annotate
+    - content.code.copy
 
 plugins:
-  - search
-  - tags
+  search: {}
+  tags: {}
 
 extra:
   social:
@@ -46,9 +47,13 @@ extra:
       name: Josh on GitHub
 
 markdown_extensions:
+  - toc:
+      permalink: true
   - abbr
   - admonition
-  - pymdownx.highlight
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
   - pymdownx.inlinehilite
   - pymdownx.snippets:
       base_path:

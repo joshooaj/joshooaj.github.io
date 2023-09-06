@@ -1,6 +1,7 @@
 ---
 draft: true
-date: 2022-01-07
+date:
+  created: 2022-01-07
 authors:
  - joshooaj
 categories:
@@ -35,7 +36,7 @@ We normally refer to a hotfix as the initial "quick fix" to update a system expe
 
 For the first several years of my career with Milestone, we delivered hotfixes/patches as zip files containing the patched DLL's and EXE's, along with some instructions. It worked, and I had a love/hate relationship with the simplicity of it. But sometime toward the end of 2016 we started using the Milestone Patch Installer, and it was a _big upgrade_ for our customers. They no longer had to read and follow detailed instructions on where each file needed to be. They didn't have to remember to stop the related Windows Services or applications. And Milestone's technical support team (myself included) no longer had to worry about customers applying the wrong fixes, or putting them in the wrong place on the file system.
 
-![Screenshot of Milestone Patch Installer for Milestone XProtect Smart Client 2021 R2 64-bit](/assets/images/MilestonePatchInstaller.png)
+![Screenshot of Milestone Patch Installer for Milestone XProtect Smart Client 2021 R2 64-bit](./MilestonePatchInstaller.png)
 
 ## Milestone Patch Installer
 
@@ -43,13 +44,13 @@ The design of the patch installer uses Microsoft's Windows Installer framework t
 
 Here's what it looks like when you have one or more Milestone cumulative patches applied. To see this list of updates, go to Control Panel > Programs and Features > Installed Updates.
 
-![Screenshot of Milestone Patch Installer for Milestone XProtect Smart Client 2021 R2 64-bit](/assets/images/WindowsInstalledUpdates.png)
+![Screenshot of Milestone Patch Installer for Milestone XProtect Smart Client 2021 R2 64-bit](./WindowsInstalledUpdates.png)
 
 Milestone's patches are typically referred to as "Cumulative Patches", "Cumulative Hotfixes" or simply "cumulatives". The point is, if you install the cumulative patches for an XProtect VMS 2021 R2 installation, you should expect that _all fixes_ available at the time you downloaded the patch installer are included in that installer. Bug fixes are sometimes rolled out 2-3 times in a month, so if you missed the first two cumulatives, that's okay. Just download the latest cumulatives available for your product version and all prior fixes for your VMS version will be applied.
 
 The way patches are distributed today, you'll find a "Milestone Patch Installer" download for each Milestone component for which a patch is available. For example, [here](https://supportcommunity.milestonesys.com/s/article/XProtect-2021-R2-cumulative-patch-installers?language=en_US) is where you can find the Milestone Patch Installer downloads for 2021 R2 today. You can see there's something available for Management Server and Recording Server, as well as a download available for MIP SDK.
 
-![Screenshot of the download.milestonesys.com downloads repository showing Management Client, MIP SDK, and Recording Server folders containg hotfixes for Milestone XProtect VMS 2021 R2](/assets/images/2021R2-Cumulatives.png)
+![Screenshot of the download.milestonesys.com downloads repository showing Management Client, MIP SDK, and Recording Server folders containg hotfixes for Milestone XProtect VMS 2021 R2](./2021R2-Cumulatives.png)
 
 ## What about automation?
 
