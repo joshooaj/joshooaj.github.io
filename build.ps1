@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
     [Parameter()]
-    [ValidateSet('Serve', 'Build')]
+    [ValidateSet('Serve', 'Build', 'Publish')]
     [string]
     $Task = 'Serve',
 
@@ -18,8 +18,7 @@ switch ($Task) {
     'Serve' {
         if ($UseInsiders) {
             docker run --rm -it -p 8000:8000 -v $PWD`:/docs ghcr.io/joshooaj/mkdocs-material-insiders:latest serve --config-file mkdocs.insiders.yml --dev-addr 0.0.0.0:8000
-        }
-        else {
+        } else {
             docker run --rm -it -p 8000:8000 -v $PWD`:/docs ghcr.io/joshooaj/mkdocs-material-insiders:latest serve --dev-addr 0.0.0.0:8000
         }
     }
@@ -27,9 +26,16 @@ switch ($Task) {
     'Build' {
         if ($UseInsiders) {
             docker run --rm -v $PWD`:/docs ghcr.io/joshooaj/mkdocs-material-insiders build --config-file mkdocs.insiders.yml
-        }
-        else {
+        } else {
             docker run --rm -v $PWD`:/docs ghcr.io/joshooaj/mkdocs-material-insiders build
+        }
+    }
+
+    'Publish' {
+        if ($UseInsiders) {
+            docker run -v $PWD`:/docs ghcr.io/joshooaj/mkdocs-material-insiders gh-deploy --force --config-file mkdocs.insiders.yml
+        } else {
+            docker run -v $PWD`:/docs ghcr.io/joshooaj/mkdocs-material-insiders gh-deploy --force
         }
     }
     Default {}

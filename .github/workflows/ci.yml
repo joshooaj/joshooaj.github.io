@@ -4,16 +4,17 @@ on:
     branches:
       - main
 jobs:
-  deploy:
+  Publish:
     runs-on: ubuntu-latest
     if: github.event.repository.fork == false
+    env:
+      GHCR_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: actions/cache@v3
         with:
-          python-version: 3.x
-          fetch-depth: 0
-      - run: pip install -U -r requirements.txt -r user-requirements.txt git+https://${GH_TOKEN}@github.com/joshooaj/mkdocs-material-insiders.git@custom
-      - run: mkdocs gh-deploy --config-file mkdocs.insiders.yml --force
-env:
-  GH_TOKEN: ${{ secrets.GH_TOKEN }} 
+          key: ${{ github.ref }}
+          path: .cache
+      - name: Publish to GH-Pages
+        shell: pwsh
+        run: .\build.ps1 -Task Publish -UseInsiders
