@@ -1,5 +1,5 @@
 site_name: JoshooaJ
-site_url: https://joshooaj.github.io/
+site_url: https://www.joshooaj.com/
 site_description: "The personal blog of Josh Hendricks."
 site_dir: Output/
 repo_name: joshooaj/joshooaj.github.io
@@ -36,6 +36,9 @@ plugins:
 
 extra:
   social:
+    - icon: fontawesome/solid/rss
+      link: feed_rss_created.xml
+      name: RSS Feed
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/joshooaj
       name: Josh on Twitter
