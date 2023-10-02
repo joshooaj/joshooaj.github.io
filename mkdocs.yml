@@ -37,7 +37,7 @@ plugins:
 extra:
   social:
     - icon: fontawesome/solid/rss
-      link: feed_rss_created.xml
+      link: /feed_rss_created.xml
       name: RSS Feed
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/joshooaj
