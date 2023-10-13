@@ -234,3 +234,5 @@ In our case, we can work around this duplicate Id property if needed by using `#
 I _think_ the "right way" to resolve the issue is to make it so that the Id properties on both the IConfigurationItem and the various types that inherit from it are both of type `#!powershell [string]` and then override the Id property on child types rather than declare _another_ Id property which effectively "hides" the parent types version of the property except when using reflection.
 
 Reflection is the primary language tool in .NET for building serializers for converting objects to and from JSON, XML, and other formats, and using the override key word should hopefully make it so that the only Id property available to `ConvertTo-Json` and other serializers is the one on the objects where the property is overridden.
+
+--8<-- "abbreviations.md"

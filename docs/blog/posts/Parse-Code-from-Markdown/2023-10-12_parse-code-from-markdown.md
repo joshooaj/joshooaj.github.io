@@ -42,3 +42,5 @@ If you find a use for this in your own projects, I'd love to hear how you're usi
 ```powershell linenums="1"
 --8<-- "blog/posts/Parse-Code-from-Markdown/Get-MdCodeBlock.ps1"
 ```
+
+--8<-- "abbreviations.md"

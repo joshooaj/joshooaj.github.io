@@ -212,3 +212,5 @@ to use it in your projects.
 ```powershell linenums="1"
 --8<-- "blog/posts/ArgumentCompleters/Get-ParentProcess.ps1"
 ```
+
+--8<-- "abbreviations.md"

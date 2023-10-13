@@ -204,3 +204,5 @@ public static SecureString ReadLine()
 ## Final thoughts
 
 There are probably more secure and complex ways to protect user input in a console app and thwart shoulder-surfing ne'er-do-wells, but this method seemed like a solid, lightweight alternative to showing passwords in plain text and storing them in simple strings. I wonder if there's a way to do it where we don't keep an unprotected `char` in memory? Let me know if there's a simpler, and/or more secure method to accomplish the same thing within the scope of a console application!
+
+--8<-- "abbreviations.md"

@@ -121,15 +121,15 @@ Here's what both options, and their validation errors might look like:
 
     Do-Something -LuckyNumber 13
 
-    <# 
+    <#
         Do-Something : Cannot validate argument on parameter 'LuckyNumber'. The number 13 is not divisible by 7.
         At line:1 char:32
         +     Do-Something -LuckyNumber 13
         +                                ~~
             + CategoryInfo          : InvalidData: (:) [Do-Something], ParameterBindingValidationException
-            + FullyQualifiedErrorId : ParameterArgumentValidationError,Do-Something    
+            + FullyQualifiedErrorId : ParameterArgumentValidationError,Do-Something
     #>
-    ```    
+    ```
 
 Both options will result with the function throwing an error, and the error messages both provide information about why
 the error occurred, but I think the error message from the function using the `[ValidateScript()]` attribute is more clear
@@ -161,7 +161,7 @@ class ValidateDivisibleBy : ValidateArgumentsAttribute {
         if ($object % $this.Divisor) {
             $exception = [ValidationMetadataException]::new("The number $object is not divisible by $($this.Divisor)")
             throw $exception
-        }    
+        }
     }
 }
 ```
@@ -215,3 +215,5 @@ This made sense for the MilestonePSTools project because the module wraps Milest
 for features available exclusively in the top-tier product version, but it also works on the free edition which lacks
 many features. Some commands, like `Get-VmsFailoverGroup` will only work when used while connected to a Milestone system
 with the `RecordingServerFailover` feature flag.
+
+--8<-- "abbreviations.md"
