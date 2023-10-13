@@ -17,4 +17,4 @@ jobs:
           path: .cache
       - name: Publish to GH-Pages
         shell: pwsh
-        run: .\build.ps1 -Task Publish -UseInsiders
+        run: .\build.ps1 -Task Publish
