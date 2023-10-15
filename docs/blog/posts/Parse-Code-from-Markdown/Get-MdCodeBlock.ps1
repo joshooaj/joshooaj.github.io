@@ -1,8 +1,6 @@
 using namespace System.Text
 using namespace System.Text.RegularExpressions
 
-# Used to keep track of where we are in a markdown file. Might use this pattern
-# later for a more full-featured tool to parse and modify markdown files.
 enum MdState {
     Undefined
     InCodeBlock
@@ -17,7 +15,7 @@ class CodeBlock {
     [bool]   $Inline
 
     [string] ToString() {
-        return '{0}:{1} Language={2}, Length={3}' -f $this.Source, $this.LineNumber, $this.Language, $this.Content.Length
+        return '{0}:{1}:{2}' -f $this.Source, $this.LineNumber, $this.Language
     }
 }
 
@@ -36,6 +34,9 @@ function Get-MdCodeBlock {
 
     .PARAMETER BasePath
     Specifies the base path to use when resolving relative file paths for the CodeBlock object's Source property.
+
+    .PARAMETER Language
+    Specifies that only the codeblocks with the named language shortcode should be returned.
 
     .EXAMPLE
     Get-ChildItem -Path .\*.md -Recurse | Get-MdCodeBlock
@@ -101,14 +102,14 @@ function Get-MdCodeBlock {
                 $file = (Resolve-Path -Path $file).Path
                 $BasePath = (Resolve-Path -Path $BasePath).Path
                 $escapedRoot = [regex]::Escape($BasePath)
-                $relativePath = $file -replace $escapedRoot, ''
+                $relativePath = $file -replace "$escapedRoot\\", ''
 
 
                 # This section imports files referenced by PyMdown snippet syntax
                 # Example: --8<-- "abbreviations.md"
                 # Note: This function only supports very basic snippet syntax.
                 # See https://facelessuser.github.io/pymdown-extensions/extensions/snippets/ for documentation on the Snippets PyMdown extension
-                $lines = Get-Content -Path $file | ForEach-Object {
+                $lines = [io.file]::ReadAllLines($file, [encoding]::UTF8) | ForEach-Object {
                     if ($_ -match '--8<-- "(?<file>[^"]+)"') {
                         $snippetPath = Join-Path -Path $BasePath -ChildPath $Matches.file
                         if (Test-Path -Path $snippetPath) {
@@ -139,7 +140,9 @@ function Get-MdCodeBlock {
                                     LineNumber = $lineNumber
                                 }
                             } elseif (($inlineMatches = [regex]::Matches($line, '(?<!`)`(#!(?<lang>\w+) )?(?<code>[^`]+)`(?!`)'))) {
-                            #} elseif ($line -match '(?<!`)`(#!(?<lang>\w+) )?(?<code>[^`]+)`(?!`)' -and ([string]::IsNullOrWhiteSpace($Language) -or $Matches.lang -eq $Language)) {
+                                if (-not [string]::IsNullOrWhiteSpace($Language) -and $inlineMatch.Groups.lang -ne $Language) {
+                                    continue
+                                }
                                 foreach ($inlineMatch in $inlineMatches) {
                                     [CodeBlock]@{
                                         Source     = $relativePath

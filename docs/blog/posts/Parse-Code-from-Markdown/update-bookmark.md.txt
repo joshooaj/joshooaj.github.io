@@ -1,0 +1,34 @@
+# Update-Bookmark
+
+## SYNOPSIS
+
+Updates the properties of a bookmark
+
+## SYNTAX
+
+```
+Update-Bookmark -Bookmark <Bookmark> [<CommonParameters>]
+```
+
+## DESCRIPTION
+
+The `Update-Bookmark` command updates a bookmark in the VMS by pushing changes
+to the bookmark object up to the Management Server.
+
+The expected workflow is that a bookmark is retrieved using Get-Bookmark.
+Then properties of the local bookmark object are changed as desired.
+Finally the modified local bookmark object is used to update the record on the Management Server by piping it to this cmdlet.
+
+REQUIREMENTS
+
+- Requires VMS connection and will attempt to connect automatically
+
+## EXAMPLES
+
+### EXAMPLE 1
+
+```powershell
+Get-Bookmark -Timestamp '2019-06-04 14:00:00' -Minutes 120 | % { $_.Description = 'Testing'; $_ | Update-Bookmark }
+```
+
+Gets all bookmarks for any device where the bookmark time is between 2PM and 4PM local time on the 4th of June, changes the Description to 'Testing', and sends the updated bookmark to the Management Server.
