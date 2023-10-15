@@ -1,6 +1,6 @@
 ---
 date:
-  created: 2022-12-21
+  created: "2022-12-21"
 authors:
  - joshooaj
 categories:
