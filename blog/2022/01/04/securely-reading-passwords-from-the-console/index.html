@@ -79,7 +79,18 @@
 <meta property="twitter.title" content="Securely Reading Passwords from the Console - JoshooaJ" />
 <meta property="twitter:description" content="The personal blog of Josh Hendricks." />
 <meta property="twitter:image" content="https://www.joshooaj.com/assets/images/social/blog/2022/01/04/securely-reading-passwords-from-the-console.png" />
-</head>
+ <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -758,7 +769,7 @@
 <li>write an asterisk (*) symbol back to the console</li>
 <li>accept the backspace key and behave as expected</li>
 </ol>
-<p><img alt="Demonstration of the console application showing the password obscured with asterisks." src="../../../../SecureConsole/SecureConsoleDemo.gif" /></p>
+<p><a class="glightbox" href="../../../../SecureConsole/SecureConsoleDemo.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Demonstration of the console application showing the password obscured with asterisks." src="../../../../SecureConsole/SecureConsoleDemo.gif" /></a></p>
 <p>Here's the <code>SecureConsole</code> class, and a demo program where I'm calling <code>SecureConsole.GetCredential()</code> to prompt the user for their credentials. The password will be recorded as a <code>SecureString</code> and then paired with the username to create a <code>System.Net.NetworkCredential</code>. For testing purposes, the plain text password from the credential is printed out to verify the text was received properly. Read on after the code sample for details.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">program.cs</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
@@ -1194,5 +1205,5 @@
       <script src="../../../../../assets/javascripts/bundle.d7e51e09.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

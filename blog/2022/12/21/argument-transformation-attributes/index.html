@@ -81,7 +81,18 @@
 <meta property="twitter.title" content="Argument Transformation Attributes - JoshooaJ" />
 <meta property="twitter:description" content="The personal blog of Josh Hendricks." />
 <meta property="twitter:image" content="https://www.joshooaj.com/assets/images/social/blog/2022/12/21/argument-transformation-attributes.png" />
-</head>
+ <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -829,7 +840,7 @@ recording server, you might try <code class="highlight"><span class="nb">Get-Vms
 which seems perfectly reasonable. But you'd be met with the following error...</p>
 <div class="highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Cannot bind parameter &#39;RecordingServer&#39;. Cannot convert the &quot;Docker Recorder&quot; value of type &quot;System.String&quot; to type &quot;VideoOS.Platform.ConfigurationItems.RecordingServer&quot;.
 </span></code></pre></div>
-<p><img alt="Parameter binding exception error message" src="../../../../ArgumentTransformation/ParameterBindingException.png" /></p>
+<p><a class="glightbox" href="../../../../ArgumentTransformation/ParameterBindingException.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Parameter binding exception error message" src="../../../../ArgumentTransformation/ParameterBindingException.png" /></a></p>
 <p>The <code>Get-VmsHardware</code> function expects a recording server <em>object</em> instead of
 a recording server name. The correct usage would then look like...</p>
 <div class="highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">$recorder</span> <span class="p">=</span> <span class="nb">Get-VmsRecordingServer</span> <span class="n">-Name</span> <span class="s1">&#39;Docker Recorder&#39;</span>
@@ -1061,7 +1072,7 @@ instead of an object, but <em>easy</em>!</p>
 </span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18"></a>    <span class="p">}</span>
 </span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
-<p><img alt="List completion of the RecordingServer parameter" src="../../../../ArgumentTransformation/ArgCompleterListCompletion.png" /></p>
+<p><a class="glightbox" href="../../../../ArgumentTransformation/ArgCompleterListCompletion.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="List completion of the RecordingServer parameter" src="../../../../ArgumentTransformation/ArgCompleterListCompletion.png" /></a></p>
 <h2 id="the-final-result">The final result<a class="headerlink" href="#the-final-result" title="Permanent link">&para;</a></h2>
 <p>We can now put the three code blocks above together and use it! It's important
 to note though that when you're working with PowerShell classes like the
@@ -1417,5 +1428,5 @@ until you have typed the associated command and parameter.</p>
       <script src="../../../../../assets/javascripts/bundle.d7e51e09.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

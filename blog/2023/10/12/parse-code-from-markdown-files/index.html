@@ -79,7 +79,18 @@
 <meta property="twitter.title" content="Parse Code from Markdown Files - JoshooaJ" />
 <meta property="twitter:description" content="The personal blog of Josh Hendricks." />
 <meta property="twitter:image" content="https://www.joshooaj.com/assets/images/social/blog/2023/10/12/parse-code-from-markdown-files.png" />
-</head>
+ <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -758,7 +769,7 @@
 
 
 <h1 id="parse-code-from-markdown-files">Parse Code from Markdown Files<a class="headerlink" href="#parse-code-from-markdown-files" title="Permanent link">&para;</a></h1>
-<p><img alt="Screenshot of Pester test output highlighting the use of aliases within markdown documentation code blocks" src="/blog/posts/Parse-Code-from-Markdown/pester-output.png" /></p>
+<p><a class="glightbox" href="/assets/images/test-md-codeblocks.hero.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Screenshot of Pester test output highlighting the use of aliases within markdown documentation code blocks" src="/assets/images/test-md-codeblocks.hero.png" /></a></p>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>Are you testing your documentation? If you write PowerShell scripts or modules, you are <em>hopefully</em> using Pester to
 test your code. And if you use PlatyPS to generate markdown documentation like I do, then you have a bunch of example
@@ -785,7 +796,7 @@ prevent breaking changes.</p>
 the time the documentation was written, these weren't aliases at all. But they are now, and people reading this
 documentation might be confused about the command names, or they may just naturally start using the alias version of
 those commands because it's in the documentation so it <em>must</em> be right!</p>
-<p><img alt="Screenshot of PowerShell documentation on a website where the aliases Get-Token and Get-RecordingServer are used." src="../../../../Parse-Code-from-Markdown/docs-site.png" /></p>
+<p><a class="glightbox" href="../../../../Parse-Code-from-Markdown/docs-site.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Screenshot of PowerShell documentation on a website where the aliases Get-Token and Get-RecordingServer are used." src="../../../../Parse-Code-from-Markdown/docs-site.png" /></a></p>
 <h2 id="demonstration">Demonstration<a class="headerlink" href="#demonstration" title="Permanent link">&para;</a></h2>
 <p>Let's take a look at an excerpt of the docs from another command, this time in markdown format. In the first
 example for <code>Update-Bookmark</code>, I used the "%" alias in place of <code>ForEach-Object</code>. To be fair, I wanted to keep the example
@@ -891,7 +902,7 @@ changes and growth over time.</p>
 <p>I absolutely love having this improved visibility into the health of the documentation. The tests call out the file, line
 number, and give me the formatted output from PSScriptAnalyzer. And you can get even more creative by using the PowerShell
 language parser to extract an abstract syntax tree and inspect all code hiding in markdown files for just about anything.</p>
-<p><img alt="A screenshot of the output from the above Pester tests" src="../../../../Parse-Code-from-Markdown/demo-pester-result.png" /></p>
+<p><a class="glightbox" href="../../../../Parse-Code-from-Markdown/demo-pester-result.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="A screenshot of the output from the above Pester tests" src="../../../../Parse-Code-from-Markdown/demo-pester-result.png" /></a></p>
 <h2 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h2>
 <p><a class="md-button md-button--primary" href="../../../../Parse-Code-from-Markdown/Get-MdCodeBlock.ps1">Download <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7Z"/></svg></span></a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">  1</a></span>
@@ -1383,5 +1394,5 @@ language parser to extract an abstract syntax tree and inspect all code hiding i
       <script src="../../../../../assets/javascripts/bundle.d7e51e09.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

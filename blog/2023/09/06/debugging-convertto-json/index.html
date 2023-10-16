@@ -81,7 +81,18 @@
 <meta property="twitter.title" content="Debugging ConvertTo-Json - JoshooaJ" />
 <meta property="twitter:description" content="The personal blog of Josh Hendricks." />
 <meta property="twitter:image" content="https://www.joshooaj.com/assets/images/social/blog/2023/09/06/debugging-convertto-json.png" />
-</head>
+ <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -803,7 +814,7 @@
 
 
 <h1 id="debugging-convertto-json">Debugging ConvertTo-Json<a class="headerlink" href="#debugging-convertto-json" title="Permanent link">&para;</a></h1>
-<p><img alt="PowerShell terminal showing a duplicate key error when using ConvertTo-Json" src="/assets/images/ConvertTo-Json-Error.png" /></p>
+<p><a class="glightbox" href="/assets/images/ConvertTo-Json-Error.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="PowerShell terminal showing a duplicate key error when using ConvertTo-Json" src="/assets/images/ConvertTo-Json-Error.png" /></a></p>
 <p>My co-worker, Jared, who regularly uses MilestonePSTools and builds tools with it brought me an interesting problem yesterday - an apparent compatibility issue between our <abbr title="Software Development Kit">SDK</abbr> and the <code class="highlight"><span class="nb">ConvertTo-Json</span></code> <abbr title="A PowerShell command with a single purpose. Pronounced &quot;command-let&quot;.">cmdlet</abbr> from the built-in Microsoft.PowerShell.Utility module. If you've ever struggled with the error "ConvertTo-Json : An item with the same key has already been added.", follow along as I share our debugging process until we finally discovered the root cause. While the details in this post involve the Milestone <abbr title="Software Development Kit">SDK</abbr> and the MilestonePSTools module, the root cause and the process of finding it is relevant to anyone using .NET assemblies or 3rd party modules with PowerShell.</p>
 <!-- more -->
 
@@ -1185,5 +1196,5 @@
       <script src="../../../../../assets/javascripts/bundle.d7e51e09.min.js"></script>
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
