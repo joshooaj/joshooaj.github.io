@@ -10,7 +10,7 @@ categories:
 
 # Parse Code from Markdown Files
 
-![Screenshot of Pester test output highlighting the use of aliases within markdown documentation code blocks](/blog/posts/Parse-Code-from-Markdown/pester-output.png)
+![Screenshot of Pester test output highlighting the use of aliases within markdown documentation code blocks](/assets/images/test-md-codeblocks.hero.png)
 
 ## Introduction
 
