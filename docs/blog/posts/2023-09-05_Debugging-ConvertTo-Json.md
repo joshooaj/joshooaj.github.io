@@ -2,7 +2,7 @@
 date:
   created: 2023-09-06
 authors:
- - joshooaj
+ - joshooaj@gmail.com
 categories:
   - PowerShell
 ---

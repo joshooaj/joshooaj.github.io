@@ -2,7 +2,7 @@
 date:
   created: 2023-10-12
 authors:
- - joshooaj
+ - joshooaj@gmail.com
 categories:
   - PowerShell
   - Markdown

@@ -2,7 +2,7 @@
 date:
   created: 2022-12-07
 authors:
- - joshooaj
+ - joshooaj@gmail.com
 categories:
   - PowerShell
   - Usability

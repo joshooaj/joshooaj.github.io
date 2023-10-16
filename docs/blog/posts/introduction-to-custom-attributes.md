@@ -3,7 +3,7 @@ draft: true
 date:
   created: 2023-09-09
 authors:
- - joshooaj
+ - joshooaj@gmail.com
 categories:
   - PowerShell
 ---

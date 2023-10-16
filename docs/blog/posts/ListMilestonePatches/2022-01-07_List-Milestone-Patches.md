@@ -3,7 +3,7 @@ draft: true
 date:
   created: 2022-01-07
 authors:
- - joshooaj
+ - joshooaj@gmail.com
 categories:
   - PowerShell
   - XProtect
@@ -20,9 +20,9 @@ Today, Milestone releases hotfixes on a regular basis - whenever they're needed.
 ``` powershell title="Example: Get-VmsHotfix"
 PS C:\> Get-VmsHotfix | Select-Object DisplayName, DisplayVersion
 
-DisplayName                                        DisplayVersion 
------------                                        -------------- 
-Milestone.Hotfix.202109202124.SCX64.21.12.7361.139 21.12.7361.139 
+DisplayName                                        DisplayVersion
+-----------                                        --------------
+Milestone.Hotfix.202109202124.SCX64.21.12.7361.139 21.12.7361.139
 Milestone.Hotfix.202108250930.MC.21.12.12177.124   21.12.12177.124
 ```
 

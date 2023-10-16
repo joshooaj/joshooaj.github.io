@@ -2,7 +2,7 @@
 date:
   created: 2022-01-04
 authors:
- - joshooaj
+ - joshooaj@gmail.com
 categories:
   - C\#
 ---
