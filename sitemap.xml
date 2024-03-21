@@ -21,11 +21,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://www.joshooaj.com/blog/2023/09/09/using-custom-attributes-in-powershell/</loc>
-         <lastmod>2024-03-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://www.joshooaj.com/blog/2022/12/07/your-users-deserve-argument-completers/</loc>
          <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
@@ -37,11 +32,6 @@
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/2023/10/02/generate-markdown-tables-from-powershell/</loc>
-         <lastmod>2024-03-21</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://www.joshooaj.com/blog/2022/01/07/list-milestone-xprotect-cumulative-patches/</loc>
          <lastmod>2024-03-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
