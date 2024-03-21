@@ -50,8 +50,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -882,7 +882,7 @@
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://github.com/joshooaj.png" alt="Josh Hendricks">
+            <img src="../../../assets/external/github.com/joshooaj.png.jpg" alt="Josh Hendricks">
           </span>
         
       </nav>
@@ -936,7 +936,7 @@ PowerShell code sitting in .md files. But what happens if you rename a command, 
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://github.com/joshooaj.png" alt="Josh Hendricks">
+            <img src="../../../assets/external/github.com/joshooaj.png.jpg" alt="Josh Hendricks">
           </span>
         
       </nav>
@@ -988,7 +988,7 @@ unnecessary padding included.</p>
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://github.com/joshooaj.png" alt="Josh Hendricks">
+            <img src="../../../assets/external/github.com/joshooaj.png.jpg" alt="Josh Hendricks">
           </span>
         
       </nav>
@@ -1038,7 +1038,7 @@ unnecessary padding included.</p>
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://github.com/joshooaj.png" alt="Josh Hendricks">
+            <img src="../../../assets/external/github.com/joshooaj.png.jpg" alt="Josh Hendricks">
           </span>
         
       </nav>
@@ -1095,7 +1095,7 @@ polluting functions with object transformation code.</p>
       <nav class="md-post__authors md-typeset">
         
           <span class="md-author">
-            <img src="https://github.com/joshooaj.png" alt="Josh Hendricks">
+            <img src="../../../assets/external/github.com/joshooaj.png.jpg" alt="Josh Hendricks">
           </span>
         
       </nav>
@@ -1234,5 +1234,9 @@ projects if you aren't doing so already.</p>
       <script src="../../../assets/javascripts/bundle.a255a381.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

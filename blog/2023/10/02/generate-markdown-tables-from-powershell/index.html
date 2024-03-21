@@ -50,8 +50,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -726,7 +726,7 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="https://github.com/joshooaj.png" alt="Josh Hendricks">
+                      <img src="../../../../../assets/external/github.com/joshooaj.png.jpg" alt="Josh Hendricks">
                     </span>
                     <span class="md-profile__description">
                       <strong>
@@ -1216,21 +1216,7 @@ a method of generating a markdown table that did not depend on the use of mkdocs
 
   <h2 id="__comments">Comments</h2>
   <!-- Insert generated snippet here -->
-  <script src="https://giscus.app/client.js"
-    data-repo="joshooaj/joshooaj.github.io"
-    data-repo-id="R_kgDOGnDpyw"
-    data-category="Announcements"
-    data-category-id="DIC_kwDOGnDpy84CZHcL"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="top"
-    data-theme="preferred_color_scheme"
-    data-lang="en"
-    data-loading="lazy"
-    crossorigin="anonymous"
-    async>
+  <script src="../../../../../assets/external/giscus.app/client.js" data-repo="joshooaj/joshooaj.github.io" data-repo-id="R_kgDOGnDpyw" data-category="Announcements" data-category-id="DIC_kwDOGnDpy84CZHcL" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" data-loading="lazy" crossorigin="anonymous" async=>
   </script>
   
   <!-- Synchronize Giscus theme with palette -->
@@ -1343,5 +1329,9 @@ a method of generating a markdown table that did not depend on the use of mkdocs
       <script src="../../../../../assets/javascripts/bundle.a255a381.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

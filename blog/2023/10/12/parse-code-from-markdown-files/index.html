@@ -48,8 +48,8 @@
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        
+        <link rel="stylesheet" href="../../../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -787,7 +787,7 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="https://github.com/joshooaj.png" alt="Josh Hendricks">
+                      <img src="../../../../../assets/external/github.com/joshooaj.png.jpg" alt="Josh Hendricks">
                     </span>
                     <span class="md-profile__description">
                       <strong>
@@ -865,7 +865,7 @@
 
 
 <h1 id="parse-code-from-markdown-files">Parse Code from Markdown Files<a class="headerlink" href="#parse-code-from-markdown-files" title="Permanent link">&para;</a></h1>
-<p><a class="glightbox" href="/assets/images/test-md-codeblocks.hero.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Screenshot of Pester test output highlighting the use of aliases within markdown documentation code blocks" src="/assets/images/test-md-codeblocks.hero.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Screenshot of Pester test output highlighting the use of aliases within markdown documentation code blocks" src="/assets/images/test-md-codeblocks.hero.png" /></a></p>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p>Are you testing your documentation? If you write PowerShell scripts or modules, you are <em>hopefully</em> using Pester to
 test your code. And if you use PlatyPS to generate markdown documentation like I do, then you have a bunch of example
@@ -892,7 +892,7 @@ prevent breaking changes.</p>
 the time the documentation was written, these weren't aliases at all. But they are now, and people reading this
 documentation might be confused about the command names, or they may just naturally start using the alias version of
 those commands because it's in the documentation so it <em>must</em> be right!</p>
-<p><a class="glightbox" href="../../../../Parse-Code-from-Markdown/docs-site.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Screenshot of PowerShell documentation on a website where the aliases Get-Token and Get-RecordingServer are used." src="../../../../Parse-Code-from-Markdown/docs-site.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Screenshot of PowerShell documentation on a website where the aliases Get-Token and Get-RecordingServer are used." src="../../../../Parse-Code-from-Markdown/docs-site.png" /></a></p>
 <h2 id="demonstration">Demonstration<a class="headerlink" href="#demonstration" title="Permanent link">&para;</a></h2>
 <p>Let's take a look at an excerpt of the docs from another command, this time in markdown format. In the first
 example for <code>Update-Bookmark</code>, I used the "%" alias in place of <code>ForEach-Object</code>. To be fair, I wanted to keep the example
@@ -998,7 +998,7 @@ changes and growth over time.</p>
 <p>I absolutely love having this improved visibility into the health of the documentation. The tests call out the file, line
 number, and give me the formatted output from PSScriptAnalyzer. And you can get even more creative by using the PowerShell
 language parser to extract an abstract syntax tree and inspect all code hiding in markdown files for just about anything.</p>
-<p><a class="glightbox" href="../../../../Parse-Code-from-Markdown/demo-pester-result.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="A screenshot of the output from the above Pester tests" src="../../../../Parse-Code-from-Markdown/demo-pester-result.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="A screenshot of the output from the above Pester tests" src="../../../../Parse-Code-from-Markdown/demo-pester-result.png" /></a></p>
 <h2 id="code">Code<a class="headerlink" href="#code" title="Permanent link">&para;</a></h2>
 <p><a class="md-button md-button--primary" href="../../../../Parse-Code-from-Markdown/Get-MdCodeBlock.ps1">Download <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7Z"/></svg></span></a></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">  1</a></span>
@@ -1370,21 +1370,7 @@ language parser to extract an abstract syntax tree and inspect all code hiding i
 
   <h2 id="__comments">Comments</h2>
   <!-- Insert generated snippet here -->
-  <script src="https://giscus.app/client.js"
-    data-repo="joshooaj/joshooaj.github.io"
-    data-repo-id="R_kgDOGnDpyw"
-    data-category="Announcements"
-    data-category-id="DIC_kwDOGnDpy84CZHcL"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="top"
-    data-theme="preferred_color_scheme"
-    data-lang="en"
-    data-loading="lazy"
-    crossorigin="anonymous"
-    async>
+  <script src="../../../../../assets/external/giscus.app/client.js" data-repo="joshooaj/joshooaj.github.io" data-repo-id="R_kgDOGnDpyw" data-category="Announcements" data-category-id="DIC_kwDOGnDpy84CZHcL" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" data-loading="lazy" crossorigin="anonymous" async=>
   </script>
   
   <!-- Synchronize Giscus theme with palette -->
@@ -1497,5 +1483,9 @@ language parser to extract an abstract syntax tree and inspect all code hiding i
       <script src="../../../../../assets/javascripts/bundle.a255a381.min.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
+    var imgSrc = element.querySelector('img').src;
+    element.setAttribute('href', imgSrc);
+});
+const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
