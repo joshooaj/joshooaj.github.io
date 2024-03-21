@@ -1,7 +1,5 @@
 {
-    "cSpell.words": [
-        "kwds"
-    ],
     "powershell.codeFormatting.preset": "OTBS",
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "files.autoSave": "onFocusChange"
 }
