@@ -1,6 +1,6 @@
-![Josh delivering lighting talk at PSHSummit22](./assets/images/pshsummit22-lightning-talk.jpg)
-
 # Welcome
+
+![Josh delivering lighting talk at PSHSummit22](./assets/images/pshsummit22-lightning-talk.jpg)
 
 I'm Josh, and this is my technical blog dedicated to topics related mostly
 to software development, including:
