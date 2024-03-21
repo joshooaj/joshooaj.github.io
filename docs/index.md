@@ -1,22 +1,39 @@
 # Welcome
 
-My name is Josh, and I'm a software engineer. My career began in 2006 providing
-application support for [Milestone Systems](https://www.milestonesys.com/),
-one of the world's leading Video Management Software (VMS) vendors, and I'm
-currently a "Senior Principal Support Engineer" for the same company.
+I'm Josh, and this is my technical blog dedicated to topics related mostly
+to software development, including:
+
+- PowerShell modules, scripts, and tips
+- Automation / DevOps
+- .NET / C#
+- Milestone XProtect VMS software & integrations
+- Home lab shenanigans involving reverse proxies, identity systems, and containers
 
 <!-- more -->
 
-In my role today, I enjoy building tools like [MilestonePSTools](https://www.milestonepstools.com/)
-to enable our teams and our customers to scale, and take advantage of Milestone's
-open platform and SDK with zero "traditional" software development experience.
+## About me
 
-This blog is a place for me to share technical notes, guides, articles, and
-whatever else my heart desires. The information shared here represents my own
-thoughts, opinions, and experiences, and does not represent the opinions,
-positions, ideology, or any other characteristic of my employer or colleagues.
+I'm currently a senior principal engineer at [Milestone Systems](https://www.milestonesys.com/)
+where I've enjoyed a variety of roles and experiences since 2006. A few years
+ago I transitioned out of a principal role in the technical support team into
+a full-time floating role half way between firefighting technical support and
+professional services escalations, and software development. As of the start of
+2024 I am a full time software developer working with a mix of PowerShell,
+.NET, and things that might be considered DevOps but I just call being a well
+rounded software engineer.
 
-Most of what I share here will relate to PowerShell and .NET software
-development, especially as it relates to Milestone XProtect VMS products.
+A sizable chunk of my time goes toward maintaining and supporting the [MilestonePSTools](https://www.milestonepstools.com/)
+PowerShell module I started building in 2019, and it's my favorite project to
+work on. It enables Milestone XProtect customers to automate configuration,
+reporting, export tasks, and more on their video surveillance systems, and it's
+used by customers at every scale from small businesses with a handful of cameras
+to government agencies and giant global data centers.
+
+I began learning PowerShell in 2019 as a part of the process of building
+MilestonePSTools, and I fell it love with it as a shell, as a language, and
+especially as a community. I have been attending the [PowerShell + DevOps Global Summit](https://www.powershellsummit.org/)
+in Bellevue, WA since 2021, and I can't recommend it highly enough. The insight
+shared during (and between) sessions is inspiring, and the community is diverse
+and welcoming.
 
 --8<-- "abbreviations.md"
