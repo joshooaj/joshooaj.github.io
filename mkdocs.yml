@@ -10,7 +10,8 @@ copyright: Copyright &copy; 2021-2022 Joshua Hendricks. All rights reserved.
 
 nav:
   - index.md
-  - blog/index.md
+  - Blog:
+    - blog/index.md
 
 theme:
   name: material
@@ -29,6 +30,7 @@ theme:
     - header.autohide
     - content.code.annotate
     - content.code.copy
+    - navigation.indexes
 
 plugins:
   - search
