@@ -12,17 +12,17 @@ if (Test-Path -Path .\.cache) {
 }
 switch ($Task) {
     'Serve' {
-        docker run --rm -it -p 8000:8000 -v $PWD`:/docs ghcr.io/joshooaj/mkdocs-material-insiders:latest serve --config-file mkdocs.insiders.yml --dev-addr 0.0.0.0:8000
+        docker run --rm -it -p 8000:8000 -v $PWD`:/docs ghcr.io/joshooaj/mkdocs-material-insiders:latest serve --dev-addr 0.0.0.0:8000
     }
 
     'Build' {
-        docker run --rm -v $PWD`:/docs ghcr.io/joshooaj/mkdocs-material-insiders build --config-file mkdocs.insiders.yml
+        docker run --rm -v $PWD`:/docs ghcr.io/joshooaj/mkdocs-material-insiders build
     }
 
     'Publish' {
         ${env:GHCR_TOKEN} | docker login -u joshooaj --password-stdin ghcr.io
         docker pull ghcr.io/joshooaj/mkdocs-material-insiders:latest
-        docker run -v $PWD`:/docs ghcr.io/joshooaj/mkdocs-material-insiders gh-deploy --force --config-file mkdocs.insiders.yml
+        docker run -v $PWD`:/docs ghcr.io/joshooaj/mkdocs-material-insiders gh-deploy --force
     }
 
     Default {}

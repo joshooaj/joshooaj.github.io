@@ -31,19 +31,39 @@ theme:
     - content.code.copy
 
 plugins:
-  search: {}
-  tags: {}
-  glightbox:
-    touchNavigation: true
-    loop: false
-    effect: zoom
-    slide_effect: slide
-    width: 100%
-    height: auto
-    zoomable: true
-    draggable: true
-    auto_caption: false
-    caption_position: bottom
+  - search
+  - tags
+  - meta
+  - blog:
+      draft_on_serve: true
+      post_excerpt: required
+  - rss:
+      image: https://www.joshooaj.com/assets/images/joshooaj.png
+      match_path: blog/posts/.*
+      abstract_delimiter: <!-- more -->
+      comments_path: "#__comments"
+      date_from_meta:
+        as_creation: "date.created"
+        default_timezone: America/Los_Angeles
+      categories:
+        - categories
+        - tags
+  - social:
+      cards_layout_options:
+        font_family: Open Sans
+        color: "#ffffff"
+        background_color: "#A2EEEC"
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      auto_caption: false
+      caption_position: bottom
 
 extra:
   social:
@@ -79,8 +99,8 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - attr_list
   - def_list
   - md_in_html
