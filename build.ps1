@@ -6,10 +6,6 @@ param(
     $Task = 'Serve'
 )
 
-docker pull ghcr.io/joshooaj/mkdocs-material-insiders:latest
-if (Test-Path -Path .\.cache) {
-    Remove-Item .\.cache -Recurse -Force
-}
 switch ($Task) {
     'Serve' {
         docker run --rm -it -p 8000:8000 -v $PWD`:/docs ghcr.io/joshooaj/mkdocs-material-insiders:latest serve --dev-addr 0.0.0.0:8000

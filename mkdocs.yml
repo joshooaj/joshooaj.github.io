@@ -37,6 +37,10 @@ plugins:
   - blog:
       draft_on_serve: true
       post_excerpt: required
+      blog_toc: true
+      archive: true
+      categories: true
+      pagination: true
   - rss:
       image: https://www.joshooaj.com/assets/images/joshooaj.png
       match_path: blog/posts/.*
