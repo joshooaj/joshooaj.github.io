@@ -48,8 +48,8 @@
       
         
         
-        
-        <link rel="stylesheet" href="../../../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -910,7 +910,7 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="../../../../../assets/external/github.com/joshooaj.png.jpg" alt="Josh Hendricks">
+                      <img src="https://github.com/joshooaj.png" alt="Josh Hendricks">
                     </span>
                     <span class="md-profile__description">
                       <strong>
@@ -999,7 +999,7 @@
 <li>write an asterisk (*) symbol back to the console</li>
 <li>accept the backspace key and behave as expected</li>
 </ol>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Demonstration of the console application showing the password obscured with asterisks." src="../../../../SecureConsole/SecureConsoleDemo.gif" /></a></p>
+<p><a class="glightbox" href="../../../../SecureConsole/SecureConsoleDemo.gif" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Demonstration of the console application showing the password obscured with asterisks." src="../../../../SecureConsole/SecureConsoleDemo.gif" /></a></p>
 <p>Here's the <code>SecureConsole</code> class, and a demo program where I'm calling <code>SecureConsole.GetCredential()</code> to prompt the user for their credentials. The password will be recorded as a <code>SecureString</code> and then paired with the username to create a <code>System.Net.NetworkCredential</code>. For testing purposes, the plain text password from the credential is printed out to verify the text was received properly. Read on after the code sample for details.</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">program.cs</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
@@ -1315,9 +1315,23 @@
 
   <h2 id="__comments">Comments</h2>
   <!-- Insert generated snippet here -->
-  <script src="../../../../../assets/external/giscus.app/client.js" data-repo="joshooaj/joshooaj.github.io" data-repo-id="R_kgDOGnDpyw" data-category="Announcements" data-category-id="DIC_kwDOGnDpy84CZHcL" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" data-loading="lazy" crossorigin="anonymous" async=>
-  </script>
-  
+  <script src="https://giscus.app/client.js"
+    data-repo="joshooaj/joshooaj.github.io"
+    data-repo-id="R_kgDOGnDpyw"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOGnDpy84CZHcL"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+</script>
+
   <!-- Synchronize Giscus theme with palette -->
   <script>
     var giscus = document.querySelector("script[src*=giscus]")
@@ -1326,7 +1340,7 @@
     var palette = __md_get("__palette")
     if (palette && typeof palette.color === "object") {
       var theme = palette.color.scheme === "slate" ? "dark" : "light"
-      giscus.setAttribute("data-theme", theme) 
+      giscus.setAttribute("data-theme", theme)
     }
 
     /* Register event handlers after documented loaded */
@@ -1428,9 +1442,5 @@
       <script src="../../../../../assets/javascripts/bundle.a255a381.min.js"></script>
       
     
-  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
-    var imgSrc = element.querySelector('img').src;
-    element.setAttribute('href', imgSrc);
-});
-const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

@@ -48,8 +48,8 @@
       
         
         
-        
-        <link rel="stylesheet" href="../../../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -943,7 +943,7 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="../../../../../assets/external/github.com/joshooaj.png.jpg" alt="Josh Hendricks">
+                      <img src="https://github.com/joshooaj.png" alt="Josh Hendricks">
                     </span>
                     <span class="md-profile__description">
                       <strong>
@@ -1279,7 +1279,7 @@ workshop in a few weeks. I never liked the name, so I renamed it to <a href="htt
 and set it up in a new repository.</p>
 <!-- more -->
 
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="PSPushover example notification" src="../../../../2024-03-21-PSPushover/pspushover_docs.png" /></a></p>
+<p><a class="glightbox" href="../../../../2024-03-21-PSPushover/pspushover_docs.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="PSPushover example notification" src="../../../../2024-03-21-PSPushover/pspushover_docs.png" /></a></p>
 <p>The module itself is pretty fun - there's a lot of reasons you might want to use
 push notifications, especially if you maintain a home lab like I do. I use them
 to see when backup operations begin and end (<em>or fail</em> 😱), when my container
@@ -1294,7 +1294,7 @@ Pages. In this post though, I want to share some of the features of the repo
 and the tools used along the way. Check out the related links in the side bar
 to a bunch of the modules/utilities mentioned below.</p>
 <h2 id="scaffolding">Scaffolding<a class="headerlink" href="#scaffolding" title="Permanent link">&para;</a></h2>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Stucco" src="../../../../2024-03-21-PSPushover/stucco.png" /></a></p>
+<p><a class="glightbox" href="../../../../2024-03-21-PSPushover/stucco.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Stucco" src="../../../../2024-03-21-PSPushover/stucco.png" /></a></p>
 <p>The scaffolding for the repo was done using Brandon Olin's <a href="https://github.com/devblackops/Stucco">Stucco</a>
 module which has been my favorite way to start a new PowerShell module project
 for a while. It's not updated frequently and there are some issues I've run into
@@ -1312,7 +1312,7 @@ user. And because I typically use a Windows laptop at home, I made some tweaks t
 "bootstrap" the devcontainer on startup so that all the PowerShell and python
 dependencies are available.</p>
 <h2 id="automated-versioning-with-nerdbankgitversioning">Automated versioning with Nerdbank.GitVersioning<a class="headerlink" href="#automated-versioning-with-nerdbankgitversioning" title="Permanent link">&para;</a></h2>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Nerdbank.GitVersioning GitHub Readme" src="../../../../2024-03-21-PSPushover/nbgv.png" /></a></p>
+<p><a class="glightbox" href="../../../../2024-03-21-PSPushover/nbgv.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Nerdbank.GitVersioning GitHub Readme" src="../../../../2024-03-21-PSPushover/nbgv.png" /></a></p>
 <p>There are lots of ways to handle versioning. I've never looked into a strategy for
 automating the major/minor version numbers - that doesn't seem smart or easy to
 do while maintaining SemVer versioning. But I've done "patch" version updates in
@@ -1348,7 +1348,7 @@ module, I added some caching using <code>actions/cache</code> and <a href="https
 helping with the python pip cache, the PowerShell module dependencies, and the
 <code>squidfunk/mkdocs-material</code> docker image which is used for building and pushing
 the docs site to GitHub Pages.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Actions Caches" src="../../../../2024-03-21-PSPushover/caches.png" /></a></p>
+<p><a class="glightbox" href="../../../../2024-03-21-PSPushover/caches.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="GitHub Actions Caches" src="../../../../2024-03-21-PSPushover/caches.png" /></a></p>
 <p>The <code>psmodulecache</code> GitHub Action is pretty great, but one thing it didn't allow
 me to do (yet) was reference my existing PSDepend <code>requirements.psd1</code> file, and
 I didn't want to declare my PowerShell module dependencies in multiple places.
@@ -1389,7 +1389,7 @@ from burning up time on GitHub's runners.</p>
 sent when someone "stars" the GitHub repo as a way to see what the notifications
 look like without creating their own "application" in their Pushover dashboard
 and running the <code>Send-Pushover</code> <abbr title="A PowerShell command with a single purpose. Pronounced &quot;command-let&quot;.">cmdlet</abbr> themselves.</p>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="PSPushover example notification" src="../../../../2024-03-21-PSPushover/example-notification.jpg" /></a></p>
+<p><a class="glightbox" href="../../../../2024-03-21-PSPushover/example-notification.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="PSPushover example notification" src="../../../../2024-03-21-PSPushover/example-notification.jpg" /></a></p>
 <p>The <code>NotifyOnStarred.yml</code> workflow is triggered on GitHub's <code>watch</code> event - that's
 the name of the event that fires when someone stars a repo. Then the version of
 PSPushover currently on the main branch is imported, and app/user tokens are read
@@ -1419,9 +1419,23 @@ Then of course you can unsubscribe because who wants extraneous notifications, r
 
   <h2 id="__comments">Comments</h2>
   <!-- Insert generated snippet here -->
-  <script src="../../../../../assets/external/giscus.app/client.js" data-repo="joshooaj/joshooaj.github.io" data-repo-id="R_kgDOGnDpyw" data-category="Announcements" data-category-id="DIC_kwDOGnDpy84CZHcL" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" data-loading="lazy" crossorigin="anonymous" async=>
-  </script>
-  
+  <script src="https://giscus.app/client.js"
+    data-repo="joshooaj/joshooaj.github.io"
+    data-repo-id="R_kgDOGnDpyw"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOGnDpy84CZHcL"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+</script>
+
   <!-- Synchronize Giscus theme with palette -->
   <script>
     var giscus = document.querySelector("script[src*=giscus]")
@@ -1430,7 +1444,7 @@ Then of course you can unsubscribe because who wants extraneous notifications, r
     var palette = __md_get("__palette")
     if (palette && typeof palette.color === "object") {
       var theme = palette.color.scheme === "slate" ? "dark" : "light"
-      giscus.setAttribute("data-theme", theme) 
+      giscus.setAttribute("data-theme", theme)
     }
 
     /* Register event handlers after documented loaded */
@@ -1532,9 +1546,5 @@ Then of course you can unsubscribe because who wants extraneous notifications, r
       <script src="../../../../../assets/javascripts/bundle.a255a381.min.js"></script>
       
     
-  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
-    var imgSrc = element.querySelector('img').src;
-    element.setAttribute('href', imgSrc);
-});
-const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

@@ -50,8 +50,8 @@
       
         
         
-        
-        <link rel="stylesheet" href="../../../../../assets/external/fonts.googleapis.com/css.49ea35f2.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
         <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
@@ -967,7 +967,7 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="../../../../../assets/external/github.com/joshooaj.png.jpg" alt="Josh Hendricks">
+                      <img src="https://github.com/joshooaj.png" alt="Josh Hendricks">
                     </span>
                     <span class="md-profile__description">
                       <strong>
@@ -1044,7 +1044,7 @@
 
 
 <h1 id="debugging-convertto-json">Debugging ConvertTo-Json<a class="headerlink" href="#debugging-convertto-json" title="Permanent link">&para;</a></h1>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="PowerShell terminal showing a duplicate key error when using ConvertTo-Json" src="../../../../../assets/images/ConvertTo-Json-Error.png" /></a></p>
+<p><a class="glightbox" href="../../../../../assets/images/ConvertTo-Json-Error.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="PowerShell terminal showing a duplicate key error when using ConvertTo-Json" src="../../../../../assets/images/ConvertTo-Json-Error.png" /></a></p>
 <p>My co-worker, Jared, who regularly uses MilestonePSTools and builds tools with it brought me an interesting problem yesterday - an apparent compatibility issue between our <abbr title="Software Development Kit">SDK</abbr> and the <code class="highlight"><span class="nb">ConvertTo-Json</span></code> <abbr title="A PowerShell command with a single purpose. Pronounced &quot;command-let&quot;.">cmdlet</abbr> from the built-in Microsoft.PowerShell.Utility module. If you've ever struggled with the error "ConvertTo-Json : An item with the same key has already been added.", follow along as I share our debugging process until we finally discovered the root cause. While the details in this post involve the Milestone <abbr title="Software Development Kit">SDK</abbr> and the MilestonePSTools module, the root cause and the process of finding it is relevant to anyone using .NET assemblies or 3rd party modules with PowerShell.</p>
 <!-- more -->
 
@@ -1306,9 +1306,23 @@
 
   <h2 id="__comments">Comments</h2>
   <!-- Insert generated snippet here -->
-  <script src="../../../../../assets/external/giscus.app/client.js" data-repo="joshooaj/joshooaj.github.io" data-repo-id="R_kgDOGnDpyw" data-category="Announcements" data-category-id="DIC_kwDOGnDpy84CZHcL" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" data-loading="lazy" crossorigin="anonymous" async=>
-  </script>
-  
+  <script src="https://giscus.app/client.js"
+    data-repo="joshooaj/joshooaj.github.io"
+    data-repo-id="R_kgDOGnDpyw"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOGnDpy84CZHcL"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="1"
+    data-input-position="top"
+    data-theme="preferred_color_scheme"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+</script>
+
   <!-- Synchronize Giscus theme with palette -->
   <script>
     var giscus = document.querySelector("script[src*=giscus]")
@@ -1317,7 +1331,7 @@
     var palette = __md_get("__palette")
     if (palette && typeof palette.color === "object") {
       var theme = palette.color.scheme === "slate" ? "dark" : "light"
-      giscus.setAttribute("data-theme", theme) 
+      giscus.setAttribute("data-theme", theme)
     }
 
     /* Register event handlers after documented loaded */
@@ -1419,9 +1433,5 @@
       <script src="../../../../../assets/javascripts/bundle.a255a381.min.js"></script>
       
     
-  <script>document$.subscribe(() => {document.querySelectorAll('.glightbox').forEach(function(element) {
-    var imgSrc = element.querySelector('img').src;
-    element.setAttribute('href', imgSrc);
-});
-const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
