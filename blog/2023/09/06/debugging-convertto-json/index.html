@@ -397,6 +397,8 @@
       
         
       
+        
+      
     
     
     
@@ -434,6 +436,35 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../archive/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    2024
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -518,6 +549,12 @@
       
         
       
+        
+      
+        
+      
+        
+      
     
     
     
@@ -565,6 +602,35 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../category/cicd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    CI/CD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../category/c/" class="md-nav__link">
         
   
@@ -572,6 +638,64 @@
     
   
     C#
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/documentation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../category/github-actions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    GitHub Actions
   
 
     
@@ -920,7 +1044,7 @@
 
 
 <h1 id="debugging-convertto-json">Debugging ConvertTo-Json<a class="headerlink" href="#debugging-convertto-json" title="Permanent link">&para;</a></h1>
-<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="PowerShell terminal showing a duplicate key error when using ConvertTo-Json" src="/assets/images/ConvertTo-Json-Error.png" /></a></p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="PowerShell terminal showing a duplicate key error when using ConvertTo-Json" src="../../../../../assets/images/ConvertTo-Json-Error.png" /></a></p>
 <p>My co-worker, Jared, who regularly uses MilestonePSTools and builds tools with it brought me an interesting problem yesterday - an apparent compatibility issue between our <abbr title="Software Development Kit">SDK</abbr> and the <code class="highlight"><span class="nb">ConvertTo-Json</span></code> <abbr title="A PowerShell command with a single purpose. Pronounced &quot;command-let&quot;.">cmdlet</abbr> from the built-in Microsoft.PowerShell.Utility module. If you've ever struggled with the error "ConvertTo-Json : An item with the same key has already been added.", follow along as I share our debugging process until we finally discovered the root cause. While the details in this post involve the Milestone <abbr title="Software Development Kit">SDK</abbr> and the MilestonePSTools module, the root cause and the process of finding it is relevant to anyone using .NET assemblies or 3rd party modules with PowerShell.</p>
 <!-- more -->
 
