@@ -9,7 +9,7 @@ categories:
 
 # Debugging ConvertTo-Json
 
-![PowerShell terminal showing a duplicate key error when using ConvertTo-Json](/assets/images/ConvertTo-Json-Error.png)
+![PowerShell terminal showing a duplicate key error when using ConvertTo-Json](../../assets/images/ConvertTo-Json-Error.png)
 
 My co-worker, Jared, who regularly uses MilestonePSTools and builds tools with it brought me an interesting problem yesterday - an apparent compatibility issue between our SDK and the `#!powershell ConvertTo-Json` cmdlet from the built-in Microsoft.PowerShell.Utility module. If you've ever struggled with the error "ConvertTo-Json : An item with the same key has already been added.", follow along as I share our debugging process until we finally discovered the root cause. While the details in this post involve the Milestone SDK and the MilestonePSTools module, the root cause and the process of finding it is relevant to anyone using .NET assemblies or 3rd party modules with PowerShell.
 
