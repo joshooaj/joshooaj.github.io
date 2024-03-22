@@ -1286,7 +1286,7 @@ to see when backup operations begin and end (<em>or fail</em> 😱), when my con
 host restarts, and when CrowdSec detects and blocks an external IP for suspicious
 or malicious activity.</p>
 <p>I think I enjoyed the process of setting up the repository more than the
-the module itself. I plan to use it as an example of how you might automate the
+module itself. I plan to use it as an example of how you might automate the
 process of generating and updating documentation for your PowerShell modules,
 as well as how you can use MkDocs to generate a static website from your docs,
 and finally how you can automatically generate and host those docs with GitHub
@@ -1303,7 +1303,7 @@ and Brandon's <a href="https://github.com/psake/PowerShellBuild">PowerShellBuild
 but it gets me up and running fast and I'm pleased as punch with 90+% of Brandon's
 "opinionated Plaster template for building high-quality PowerShell modules".</p>
 <h2 id="devcontainer-codespace">DevContainer / Codespace<a class="headerlink" href="#devcontainer-codespace" title="Permanent link">&para;</a></h2>
-<p>The Stucco plater template includes a starter devcontainer, but since I want to
+<p>The Stucco plaster template includes a starter devcontainer, but since I want to
 use the devcontainer as a tool to build and serve an MkDocs site for local
 documentation previews, I changed the Dockerfile to use <code>squidfunk/mkdocs-material:latest</code>
 as a base image, and updated the file to install PowerShell 7 and setup a non-root
@@ -1331,8 +1331,8 @@ the version schema. The advantage here over the previous strategies I've used is
 that the module version can be easily connected to the associated git commit.</p>
 <p>Here's how it works with the PSPushover module right now:</p>
 <ol>
-<li>The <code>version.json</code> file provides the major/minor version numbers and whatever the number is the module manifest is irrelevant as it will be updated in the build output as a part of the build.</li>
-<li>In <code>psakeFile.ps1</code>, I manually set the module version to use for the "compiled" module by running <code>nbgv get-version</code> and grabbing the <code>SimpleVersion</code> value.</li>
+<li>The <code>version.json</code> file provides the major/minor version numbers. The number in the module manifest is irrelevant as it will be updated as a part of the build.</li>
+<li>In <code>psakeFile.ps1</code>, I set the module version to use for the "compiled" module by running <code>nbgv get-version</code> and grabbing the <code>SimpleVersion</code> value.</li>
 <li>When it's time to bump the major or minor version, I'll update the <code>version.json</code> file. Until then, the versioning takes care of itself.</li>
 </ol>
 <h2 id="automated-publishing-on-v-tags">Automated publishing on v* tags<a class="headerlink" href="#automated-publishing-on-v-tags" title="Permanent link">&para;</a></h2>
