@@ -65,9 +65,7 @@ plugins:
       categories:
         - categories
         - tags
-  - social:
-      cards_layout_options:
-        font_family: Open Sans
+  - social
   - glightbox:
       touchNavigation: true
       loop: false
