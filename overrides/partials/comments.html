@@ -9,15 +9,15 @@
     data-mapping="pathname"
     data-strict="0"
     data-reactions-enabled="1"
-    data-emit-metadata="0"
+    data-emit-metadata="1"
     data-input-position="top"
     data-theme="preferred_color_scheme"
     data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async>
-  </script>
-  
+</script>
+
   <!-- Synchronize Giscus theme with palette -->
   <script>
     var giscus = document.querySelector("script[src*=giscus]")
@@ -26,7 +26,7 @@
     var palette = __md_get("__palette")
     if (palette && typeof palette.color === "object") {
       var theme = palette.color.scheme === "slate" ? "dark" : "light"
-      giscus.setAttribute("data-theme", theme) 
+      giscus.setAttribute("data-theme", theme)
     }
 
     /* Register event handlers after documented loaded */

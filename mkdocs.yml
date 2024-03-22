@@ -82,7 +82,6 @@ plugins:
       auto_caption: false
       caption_position: bottom
   - optimize
-  - privacy
 
 extra:
   social:
