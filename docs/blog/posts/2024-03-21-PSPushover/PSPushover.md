@@ -40,7 +40,7 @@ host restarts, and when CrowdSec detects and blocks an external IP for suspiciou
 or malicious activity.
 
 I think I enjoyed the process of setting up the repository more than the
-the module itself. I plan to use it as an example of how you might automate the
+module itself. I plan to use it as an example of how you might automate the
 process of generating and updating documentation for your PowerShell modules,
 as well as how you can use MkDocs to generate a static website from your docs,
 and finally how you can automatically generate and host those docs with GitHub
@@ -62,7 +62,7 @@ but it gets me up and running fast and I'm pleased as punch with 90+% of Brandon
 
 ## DevContainer / Codespace
 
-The Stucco plater template includes a starter devcontainer, but since I want to
+The Stucco plaster template includes a starter devcontainer, but since I want to
 use the devcontainer as a tool to build and serve an MkDocs site for local
 documentation previews, I changed the Dockerfile to use `squidfunk/mkdocs-material:latest`
 as a base image, and updated the file to install PowerShell 7 and setup a non-root
@@ -81,11 +81,11 @@ do while maintaining SemVer versioning. But I've done "patch" version updates in
 a few different ways in the past:
 
 - Manually bumping the version before (or immediately after) releasing.
-  - I don't like having to do a git commit to bump the version after every single release.
+   - I don't like having to do a git commit to bump the version after every single release.
 - Using a version based on the time elapsed since the unix epoch.
-  - This isn't _bad_ but if you use days-since-epoch you can't easily release twice in a day if you need to. And the patch number can get pretty long.
+   - This isn't _bad_ but if you use days-since-epoch you can't easily release twice in a day if you need to. And the patch number can get pretty long.
 - Checking the latest version on PSGallery and incrementing it by one.
-  - This is a great option. It puts a dependency on being able to reach PSGallery, but it has pretty good uptime and if you're publishing to the gallery anyway, your publish step will fail during an outage anyway.
+   - This is a great option. It puts a dependency on being able to reach PSGallery, but it has pretty good uptime and if you're publishing to the gallery anyway, your publish step will fail during an outage anyway.
 
 My favorite method now is to use the [Nerdbank.GitVersioning](https://github.com/dotnet/Nerdbank.GitVersioning)
 CLI tool, `nbgv`, with a `version.json` file at the root of the project to describe
@@ -94,8 +94,8 @@ that the module version can be easily connected to the associated git commit.
 
 Here's how it works with the PSPushover module right now:
 
-1. The `version.json` file provides the major/minor version numbers and whatever the number is the module manifest is irrelevant as it will be updated in the build output as a part of the build.
-2. In `psakeFile.ps1`, I manually set the module version to use for the "compiled" module by running `nbgv get-version` and grabbing the `SimpleVersion` value.
+1. The `version.json` file provides the major/minor version numbers. The number in the module manifest is irrelevant as it will be updated as a part of the build.
+2. In `psakeFile.ps1`, I set the module version to use for the "compiled" module by running `nbgv get-version` and grabbing the `SimpleVersion` value.
 3. When it's time to bump the major or minor version, I'll update the `version.json` file. Until then, the versioning takes care of itself.
 
 ## Automated publishing on v* tags
