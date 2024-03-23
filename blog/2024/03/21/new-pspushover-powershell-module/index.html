@@ -1318,12 +1318,18 @@ automating the major/minor version numbers - that doesn't seem smart or easy to
 do while maintaining SemVer versioning. But I've done "patch" version updates in
 a few different ways in the past:</p>
 <ul>
-<li>Manually bumping the version before (or immediately after) releasing.</li>
+<li>Manually bumping the version before (or immediately after) releasing.<ul>
 <li>I don't like having to do a git commit to bump the version after every single release.</li>
-<li>Using a version based on the time elapsed since the unix epoch.</li>
+</ul>
+</li>
+<li>Using a version based on the time elapsed since the unix epoch.<ul>
 <li>This isn't <em>bad</em> but if you use days-since-epoch you can't easily release twice in a day if you need to. And the patch number can get pretty long.</li>
-<li>Checking the latest version on PSGallery and incrementing it by one.</li>
+</ul>
+</li>
+<li>Checking the latest version on PSGallery and incrementing it by one.<ul>
 <li>This is a great option. It puts a dependency on being able to reach PSGallery, but it has pretty good uptime and if you're publishing to the gallery anyway, your publish step will fail during an outage anyway.</li>
+</ul>
+</li>
 </ul>
 <p>My favorite method now is to use the <a href="https://github.com/dotnet/Nerdbank.GitVersioning">Nerdbank.GitVersioning</a>
 <abbr title="Command-line Interface">CLI</abbr> tool, <code>nbgv</code>, with a <code>version.json</code> file at the root of the project to describe
