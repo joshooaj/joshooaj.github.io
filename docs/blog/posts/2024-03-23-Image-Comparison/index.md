@@ -79,8 +79,8 @@ Here's a quick summary of the dHash algorithm:
 
 1. Reduce the size to 9x8 pixels. Don't worry about the original image size or aspect ratio.
 2. Convert to grayscale because we only care about the "brightness" of each pixel.
-3. Compare each pixel's brightness compared to the neighbor to the right. This is why the image is resized to 9x8 - we will only take note of the first 8 pixels in each row.
-4. Assign a bit value of "1" if the current pixel is brighter than the neighbor to the right.
+3. Compare each pixel's brightness to the neighbor on the right. This is why the image is resized to 9x8 - we need 8 bits per row.
+4. Assign a bit value of "1" if the current pixel is brighter than the neighbor on the right.
 
 You will end up with one byte per row, and 8 rows, for a total of 64 bits. Convert
 the array of bytes to a hexadecimal string and you have your dHash.
