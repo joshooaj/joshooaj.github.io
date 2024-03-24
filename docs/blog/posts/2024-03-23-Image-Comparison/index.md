@@ -12,9 +12,9 @@ links:
   - Wikipedia - Perceptual Hashing: https://en.wikipedia.org/wiki/Perceptual_hashing
 ---
 
-# Image Comparison
-
 ![Coastline Bluff](hero.jpg)
+
+# Image Comparison
 
 A couple weeks ago I came across a couple of blog post on image comparison
 algorithms shared by Dr. Neal Krawetz. One of them, titled "[Kind Of Like That](https://www.hackerfactor.com/blog/index.php?/archives/529-Kind-of-Like-That.html)",
