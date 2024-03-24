@@ -14,6 +14,8 @@ links:
 
 # Image Comparison
 
+![Coastline Bluff](hero.jpg)
+
 A couple weeks ago I came across a couple of blog post on image comparison
 algorithms shared by Dr. Neal Krawetz. One of them, titled "[Kind Of Like That](https://www.hackerfactor.com/blog/index.php?/archives/529-Kind-of-Like-That.html)",
 describes the "dHash" algorithm which generates a perceptual hash based on
@@ -21,8 +23,6 @@ gradients in the image. With more than 200k family photos to wrangle, I wrote up
 a PowerShell implementation to find similar images and it works surprisingly well!
 
 <!-- more -->
-
-![Coastline Bluff](hero.jpg)
 
 After almost 20 years of taking pictures and videos with our smart phones, our
 family photos and videos are scattered between the Google and Apple clouds. In
