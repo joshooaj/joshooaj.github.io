@@ -14,7 +14,7 @@ links:
 
 # Image Comparison
 
-A couple weeks ago I came across a couple of blog post on image comparison
+A couple weeks ago I came across a couple of blog posts on image comparison
 algorithms shared by Dr. Neal Krawetz. One of them, titled "[Kind Of Like That](https://www.hackerfactor.com/blog/index.php?/archives/529-Kind-of-Like-That.html)",
 describes the "dHash" algorithm which generates a perceptual hash based on
 gradients in the image. With more than 200k family photos to wrangle, I wrote up
