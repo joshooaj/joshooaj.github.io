@@ -69,7 +69,7 @@ plugins:
       cards_layout_options:
         font_family: Open Sans
         color: "#ffffff"
-        background_color: "#A2EEEC"
+        background_color: "#224cdd"
   - glightbox:
       touchNavigation: true
       loop: false
