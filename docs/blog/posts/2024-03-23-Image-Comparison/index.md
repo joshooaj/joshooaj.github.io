@@ -103,7 +103,7 @@ hash comparison shows that the images have a strong visual similarity.
 | ---------------------------------------------- | ---------------------------------------------- |
 | ![Photo 1](photo1.jpg){ width="300" }          | ![Photo 2](photo2.jpg){ width="300" }          |
 | ![dHash 1](photo1.dhash.jpg){ width="300" }    | ![dHash 2](photo2.dhash.jpg){ width="300" }    |
-| dHash: 41**30**4c**4b**e436784c                | dHash: 41**20**4c**49**e436784c                |
+| dHash: 41304c4be436784c                        | dHash: 41204c49e436784c                        |
 | SHA1: 80187EB0E86F2FCDE82E60D7CD53BB0B1B1FF686 | SHA1: 5BC13493BB94536C3EAE794A924C1D9A00D207D6 |
 
 ### Image filter applied
@@ -118,7 +118,7 @@ under 10, we can be fairly confident that the images are similar.
 | ---------------------------------------------- | ---------------------------------------------- |
 | ![Photo 3](photo3.jpg){ width="300" }          | ![Photo 4](photo4.jpg){ width="300" }          |
 | ![dHash 3](photo3.dhash.jpg){ width="300" }    | ![dHash 4](photo4.dhash.jpg){ width="300" }    |
-| dHash: 60606040**58**7c**5c**7c                | dHash: 60606040**d8**7c**5d**7c                |
+| dHash: 60606040587c5c7c                        | dHash: 60606040d87c5d7c                        |
 | SHA1: BDE8B4AB0DC4E28D4DA72A982E4B99159E72EA9C | SHA1: C624DC07813ABBC07E286665AF7A41941F19F9AF |
 
 ### Very different cats
@@ -131,7 +131,7 @@ dHash comparison returns a value of 20.
 | ---------------------------------------------- | ---------------------------------------------- |
 | ![Photo 5](photo5.jpg){ width="300" }          | ![Photo 6](photo6.jpg){ width="300" }          |
 | ![dHash 5](photo5.dhash.jpg){ width="300" }    | ![dHash 6](photo6.dhash.jpg){ width="300" }    |
-| dHash: **564e7c6cee3f526e**                    | dHash: **a460e1bd57128c51**                    |
+| dHash: 564e7c6cee3f526e                        | dHash: 54ccace8e8cbe67e                        |
 | SHA1: 51E2DFE65974C86740C314E7883D22C163D3EA1B | SHA1: A58DBDAA875B5FC311BBB35A74748E68550CFC12 |
 
 ## Code
