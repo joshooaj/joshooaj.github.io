@@ -131,7 +131,7 @@ dHash comparison returns a value of 20.
 | ---------------------------------------------- | ---------------------------------------------- |
 | ![Photo 5](photo5.jpg){ width="300" }          | ![Photo 6](photo6.jpg){ width="300" }          |
 | ![dHash 5](photo5.dhash.jpg){ width="300" }    | ![dHash 6](photo6.dhash.jpg){ width="300" }    |
-| dHash: **564e7c6cee3f526e**                    | dHash: **564e7c6cee3f526e**                    |
+| dHash: **564e7c6cee3f526e**                    | dHash: **a460e1bd57128c51**                    |
 | SHA1: 51E2DFE65974C86740C314E7883D22C163D3EA1B | SHA1: A58DBDAA875B5FC311BBB35A74748E68550CFC12 |
 
 ## Code
