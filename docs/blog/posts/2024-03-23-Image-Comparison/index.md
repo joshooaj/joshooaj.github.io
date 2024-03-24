@@ -12,8 +12,6 @@ links:
   - Wikipedia - Perceptual Hashing: https://en.wikipedia.org/wiki/Perceptual_hashing
 ---
 
-![Coastline Bluff](hero.jpg)
-
 # Image Comparison
 
 A couple weeks ago I came across a couple of blog post on image comparison
@@ -23,6 +21,8 @@ gradients in the image. With more than 200k family photos to wrangle, I wrote up
 a PowerShell implementation to find similar images and it works surprisingly well!
 
 <!-- more -->
+
+![Coastline Bluff](hero.jpg)
 
 After almost 20 years of taking pictures and videos with our smart phones, our
 family photos and videos are scattered between the Google and Apple clouds. In
