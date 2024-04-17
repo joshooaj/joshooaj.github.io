@@ -3,7 +3,6 @@
 ![Josh delivering lighting talk at PSHSummit22](./assets/images/pshsummit22-lightning-talk.jpg)
 
 ## About me
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 I am a senior principal engineer with 18 years of experience in "figuring things out" in technical
 support, IT, management, and software engineering roles at [Milestone Systems](https://www.milestonesys.com/),
