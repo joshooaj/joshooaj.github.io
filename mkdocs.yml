@@ -6,7 +6,7 @@ repo_name: joshooaj/joshooaj.github.io
 repo_url: https://github.com/joshooaj/joshooaj.github.io
 edit_uri: edit/main/docs/
 docs_dir: docs
-copyright: '<label for="last-track">🎧 Listening to: </label><span id="last-track" class="last-track">loading...</span><br />Copyright &copy; 2021-2022 Joshua Hendricks. All rights reserved.'
+copyright: '<label for="last-track">🎧</label><span id="last-track" class="last-track">loading...</span><br />Copyright &copy; 2021-2022 Joshua Hendricks. All rights reserved.'
 
 nav:
   - index.md
