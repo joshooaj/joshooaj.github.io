@@ -11,7 +11,7 @@ categories:
 
 # Serving a web api with Pode
 
-![Screenshot of this blog's footer with the now-playing text "When I Come Around" by Green Day](./screenshot-footer.png)
+![Screenshot of this blog's footer with the now-playing text "When I Come Around" by Green Day](../../../assets/images/2024-05-03-Pode-Now-Playing.png)
 
 I added a subtle "Now playing" text to the footer of this site which represents the first result in the response from
 the [user.getRecentTracks](https://www.last.fm/api/show/user.getRecentTracks) method on the Last.FM API. The data is
