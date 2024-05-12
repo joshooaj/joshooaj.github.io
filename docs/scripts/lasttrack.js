@@ -11,11 +11,18 @@ async function lasttrack() {
     }
 }
 
+let nowPlaying = ""
 document.addEventListener('DOMContentLoaded', async function() {
     async function updateLastTrack() {
         var track = await lasttrack();
+        var trackNameAndArtist = `${track.name} - ${track.artist["#text"]}`
+        if (trackNameAndArtist === nowPlaying) {
+            return
+        }
+        console.log("Updating last played track")
+        nowPlaying = trackNameAndArtist
         document.querySelectorAll('.last-track').forEach(element => {
-            element.innerHTML = `<a href="${track.url}">${track.name} - ${track.artist["#text"]}</a>`
+            element.innerHTML = `<a href="${track.url}">${nowPlaying}</a>`
         });
     }
     updateLastTrack()

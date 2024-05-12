@@ -1,0 +1,24 @@
+services:
+  homelab:
+    image: joshooaj/homelabapi:latest
+    build:
+      dockerfile: dockerfile
+    restart: unless-stopped
+    environment:
+      LASTFM_USER: ${LASTFM_API_USER}
+      LASTFM_API_KEY: ${LASTFM_API_KEY}
+    volumes:
+      - ./app:/app
+    networks:
+      - web
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.homelab.entrypoints=https
+      - traefik.http.routers.homelab.rule=Host(`homelab.joshooaj.com`)
+      - traefik.http.routers.homelab.middlewares=cors
+      - traefik.http.middlewares.cors.headers.accesscontrolalloworiginlist=https://www.joshooaj.com
+      - traefik.http.services.homelab.loadbalancer.server.port=80
+networks:
+  web:
+    name: web-secure
+    external: true
