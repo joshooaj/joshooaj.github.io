@@ -93,12 +93,9 @@ extra:
     - icon: fontawesome/solid/rss
       link: /feed_rss_created.xml
       name: RSS Feed
-    - icon: fontawesome/brands/mastodon
-      link: https://mastodon.social/@joshooaj
-      name: Josh on Mastodon
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/joshooaj
-      name: Josh on Twitter
+    - icon: fontawesome/brands/bluesky
+      link: https://bsky.app/profile/joshooaj.com
+      name: Josh on Bluesky
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/joshooaj
       name: Josh on LinkedIn
