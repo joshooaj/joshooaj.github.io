@@ -102,6 +102,9 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/joshooaj
       name: Josh on GitHub
+    - icon: fontawesome/brands/signal-messenger
+      link: https://signal.me/#eu/c5pIBhxkru1zWIr6GP2vZkD3teusXme0pqCz3y9hALDfm8SRdPJC8LTkb4B846Rx
+      name: Contact me on Signal
 
 markdown_extensions:
   - toc:
