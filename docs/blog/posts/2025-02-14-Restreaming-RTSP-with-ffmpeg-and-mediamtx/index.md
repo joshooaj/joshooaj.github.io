@@ -10,6 +10,7 @@ categories:
 links:
   - FFmpeg: https://ffmpeg.org/
   - MediaMTX: https://github.com/bluenviron/mediamtx
+  - go2rtc: https://github.com/AlexxIT/go2rtc
 ---
 
 # Restreaming RTSP with FFmpeg and MediaMTX
@@ -113,6 +114,14 @@ ffmpeg -rtsp_transport tcp -i "rtsp://username:password@10.10.10.10:8554/profile
 
 Once I allowed FFmpeg to transcode from the source H.265 stream to H.264, XProtect was able to retrieve the stream and
 my camera was finally online in the VMS.
+
+## Alternative media router
+
+After sharing my experience with MediaMTX with one of my coworkers, he pointed out that he has had success with a tool
+called [go2rtc](https://github.com/AlexxIT/go2rtc) in the past. I haven't used it yet, but based on a quick look at the
+GitHub repository, it may be a simpler, and potentially higher performance tool for the same job.
+
+![Image representing the supported inputs and outputs for go2rtc](./go2rtc.png)
 
 ## Final thoughts
 
