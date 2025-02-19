@@ -1280,6 +1280,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#alternative-media-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternative media router
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#final-thoughts" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1369,7 +1380,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                           <span class="md-ellipsis">
                             
-                              6 min read
+                              7 min read
                             
                           </span>
                         </div>
@@ -1430,6 +1441,32 @@
     
   
     MediaMTX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+                      
+                        
+                        
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/AlexxIT/go2rtc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    
+  
+    go2rtc
   
 
     
@@ -1542,6 +1579,11 @@ h264, and that worked perfectly!</p>
 </span></code></pre></div>
 <p>Once I allowed FFmpeg to transcode from the source H.265 stream to H.264, XProtect was able to retrieve the stream and
 my camera was finally online in the <abbr title="Video Management System">VMS</abbr>.</p>
+<h2 id="alternative-media-router">Alternative media router<a class="headerlink" href="#alternative-media-router" title="Permanent link">&para;</a></h2>
+<p>After sharing my experience with MediaMTX with one of my coworkers, he pointed out that he has had success with a tool
+called <a href="https://github.com/AlexxIT/go2rtc">go2rtc</a> in the past. I haven't used it yet, but based on a quick look at the
+GitHub repository, it may be a simpler, and potentially higher performance tool for the same job.</p>
+<p><a class="glightbox" href="../../../../2025-02-14-Restreaming-RTSP-with-ffmpeg-and-mediamtx/go2rtc.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image representing the supported inputs and outputs for go2rtc" src="../../../../2025-02-14-Restreaming-RTSP-with-ffmpeg-and-mediamtx/go2rtc.png" /></a></p>
 <h2 id="final-thoughts">Final thoughts<a class="headerlink" href="#final-thoughts" title="Permanent link">&para;</a></h2>
 <p>This is by no means a recommended pattern for a production system. There are numerous issues here...</p>
 <ol>
