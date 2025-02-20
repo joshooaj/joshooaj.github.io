@@ -66,6 +66,8 @@ ffmpeg -rtsp_transport tcp -i "rtsp://username:password@10.10.10.10:8554/profile
 
 ## Media Router
 
+![MediaMTX logo](./mediamtx.png)
+
 This _looked_ like it was working, but I misunderstood what FFmpeg was actually doing. I expected that it was serving up
 the source stream using it's own local rtsp service on `rtsp://localhost:8554/` but that wasn't working for me. And when
 I ran `netstat` or `Get-NetTcpConnection` I couldn't see any evidence that there was anything listening on `localhost:8554`.
@@ -117,11 +119,11 @@ my camera was finally online in the VMS.
 
 ## Alternative media router
 
+![Image representing the supported inputs and outputs for go2rtc](./go2rtc.png)
+
 After sharing my experience with MediaMTX with one of my coworkers, he pointed out that he has had success with a tool
 called [go2rtc](https://github.com/AlexxIT/go2rtc) in the past. I haven't used it yet, but based on a quick look at the
 GitHub repository, it may be a simpler, and potentially higher performance tool for the same job.
-
-![Image representing the supported inputs and outputs for go2rtc](./go2rtc.png)
 
 ## Final thoughts
 
