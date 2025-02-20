@@ -6,7 +6,10 @@ repo_name: joshooaj/joshooaj.github.io
 repo_url: https://github.com/joshooaj/joshooaj.github.io
 edit_uri: edit/main/docs/
 docs_dir: docs
-copyright: '<label for="last-track">🎧</label><span id="last-track" class="last-track">loading...</span><br />Copyright &copy; 2021-2025 Joshua Hendricks. All rights reserved.'
+copyright: >
+  <label for="last-track">🎧</label><span id="last-track" class="last-track">loading...</span><br />
+  Copyright &copy; 2021-2025 Joshua Hendricks. All rights reserved.
+  <a href="#__consent">Change cookie settings</a>
 
 nav:
   - index.md
@@ -92,6 +95,14 @@ extra:
   analytics:
     provider: custom
     property: foobar
+  consent:
+    title: Cookie consent
+    cookies:
+      analytics: Plausible
+    description: >-
+      I get it - these cookie consent dialogs are annoying. I use a self-hosted instance of [Plausible](https://plausible.io/)
+      as an alternative to Google Analytics to track page views. This is helpful for me to gauge interest and reach, but
+      feel free to decline. I know I always do :)
   social:
     - icon: fontawesome/solid/rss
       link: /feed_rss_created.xml
@@ -136,3 +147,4 @@ markdown_extensions:
 
 extra_javascript:
   - "scripts/lasttrack.js"
+  - "scripts/consent.js"
