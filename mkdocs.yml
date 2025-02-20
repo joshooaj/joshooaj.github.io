@@ -89,6 +89,9 @@ plugins:
   - optimize
 
 extra:
+  analytics:
+    provider: custom
+    property: foobar
   social:
     - icon: fontawesome/solid/rss
       link: /feed_rss_created.xml
