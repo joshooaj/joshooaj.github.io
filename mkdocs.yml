@@ -100,9 +100,9 @@ extra:
     cookies:
       analytics: Plausible
     description: >-
-      I get it - these cookie consent dialogs are annoying. I use a self-hosted instance of [Plausible](https://plausible.io/)
-      as an alternative to Google Analytics to track page views. This is helpful for me to gauge interest and reach, but
-      feel free to decline. I know I always do :)
+      I use a self-hosted instance of <a href="https://plausible.io/">Plausible</a> as an alternative to Google
+      Analytics to track page views. This is helpful for me to gauge interest and reach, but I get it - cookie consent
+      and analytics are annoying. Feel free to decline, I know I always do! :)
   social:
     - icon: fontawesome/solid/rss
       link: /feed_rss_created.xml
