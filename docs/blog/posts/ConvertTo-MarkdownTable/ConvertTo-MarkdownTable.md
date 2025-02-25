@@ -23,7 +23,7 @@ a method of generating a markdown table that did not depend on the use of mkdocs
 [Download :material-download:](ConvertTo-MarkdownTable.ps1){ .md-button .md-button--primary }
 
 ```powershell linenums="1"
---8<-- "blog/posts/ConvertTo-MarkdownTable/ConvertTo-MarkdownTable.ps1"
+--8<-- "gists/ConvertTo-MarkdownTable.ps1"
 ```
 
 --8<-- "abbreviations.md"

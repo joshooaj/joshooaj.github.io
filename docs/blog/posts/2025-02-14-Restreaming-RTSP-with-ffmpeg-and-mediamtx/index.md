@@ -15,11 +15,11 @@ links:
 
 # Restreaming RTSP with FFmpeg and MediaMTX
 
+![ffmpeg logo](../../../assets/images/ffmpeg-logo.svg){ width="400" }
+
 If you've ever messed with IP cameras and RTSP video feeds, you might have run into a situation where VLC can access
 the stream without a problem, but the system meant to record that stream can't seem to do it. There's nothing more
 permanent than a temporary fix, so in this post I'll show you (and my future self) how to work around the issue.
-
-![hero image](../../../assets/images/universal-driver-working.png)
 
 <!-- more -->
 
@@ -116,6 +116,8 @@ ffmpeg -rtsp_transport tcp -i "rtsp://username:password@10.10.10.10:8554/profile
 
 Once I allowed FFmpeg to transcode from the source H.265 stream to H.264, XProtect was able to retrieve the stream and
 my camera was finally online in the VMS.
+
+![Screenshot of Management Client showing the universal driver working](../../../assets/images/universal-driver-working.png)
 
 ## Alternative media router
 
