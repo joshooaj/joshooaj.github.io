@@ -89,20 +89,14 @@ plugins:
       draggable: true
       auto_caption: false
       caption_position: bottom
-  - optimize
+  - material-plausible
+  # - optimize
 
 extra:
   analytics:
-    provider: custom
-    property: foobar
-  consent:
-    title: Cookie consent
-    cookies:
-      analytics: Plausible
-    description: >-
-      I use a self-hosted instance of <a href="https://plausible.io/">Plausible</a> as an alternative to Google
-      Analytics to track page views. This is helpful for me to gauge interest and reach, but I get it - cookie consent
-      and analytics are annoying. Feel free to decline, I know I always do! :)
+    provider: plausible
+    domain: joshooaj.com
+    src: https://plausible.joshooaj.com/js/script.hash.outbound-links.js
   social:
     - icon: fontawesome/solid/rss
       link: /feed_rss_created.xml
