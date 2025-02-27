@@ -10,7 +10,7 @@ categories:
 
 # Nerdbank.GitVersioning and the Revision number
 
-![Screenshot of various versions returned by the command "nbgv get-version"](../../../assets/images/2024-08-02-nbgv-revision-wut.png)
+![Screenshot of various versions returned by the command "nbgv get-version"](2024-08-02-nbgv-revision-wut.png)
 
 I love using the NerdBank.GitVersioning CLI tool `nbgv`. It completely removes the need to think about an aspect of a
 project that doesn't add any value to your customers. But today I realized I understood the first three parts of the
