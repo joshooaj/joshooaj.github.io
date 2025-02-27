@@ -17,14 +17,11 @@
       
       
       
-        
-      
-      
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../../../feed_rss_created.xml">
         <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../../../feed_rss_updated.xml">
       
       <link rel="icon" href="../../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22+insiders-4.53.8">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
     
     
       
@@ -32,10 +29,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.46e89654.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -54,18 +51,89 @@
       
     
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
 
 
-  <script defer data-domain="joshooaj.com" src="https://plausible.joshooaj.com/js/script.hash.outbound-links.js"></script>
-<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+  <script
+  defer
+  data-domain="joshooaj.com"
+  src="https://plausible.joshooaj.com/js/script.hash.outbound-links.js"
+></script>
+
+<script>
+  window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) };
+
+  /* Register event handlers after documented loaded */
+  document.addEventListener("DOMContentLoaded", function () {
+    /* Set up search tracking */
+    if (document.forms.search) {
+      var query = document.forms.search.query;
+      query.addEventListener("blur", function() {
+        if (this.value) plausible("Search", { props: { search_term: this.value } });
+      })
+    }
+
+    /* Set up feedback, i.e. "Was this page helpful?" */
+    document$.subscribe(function () {
+      var feedback = document.forms.feedback;
+      if (typeof feedback === "undefined") return;
+
+      /* Send feedback to Plausible */
+      for (var button of feedback.querySelectorAll("[type=submit]")) {
+        button.addEventListener("click", function (ev) {
+          ev.preventDefault();
+
+          var page = document.location.pathname;
+          var value = this.getAttribute("data-md-value");
+          console.log("[feedback] User clicked", { value });
+          plausible(`Feedback: ${value}`);
+
+          /* Disable form and show note, if given */
+          feedback.firstElementChild.disabled = true;
+          var note = feedback.querySelector(".md-feedback__note [data-md-value='" + value + "']");
+          if (note) note.hidden = false;
+        })
+
+        /* Show feedback */
+        feedback.hidden = false;
+      }
+    });
+  });
+</script>
   
-    <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
   
 
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Restreaming RTSP with FFmpeg and MediaMTX - JoshooaJ" >
+      
+        <meta  property="og:description"  content="The personal blog of Josh Hendricks." >
+      
+        <meta  property="og:image"  content="https://www.joshooaj.com/assets/images/social/blog/posts/2025-02-14-Restreaming-RTSP-with-ffmpeg-and-mediamtx/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://www.joshooaj.com/blog/2025/02/19/restreaming-rtsp-with-ffmpeg-and-mediamtx/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Restreaming RTSP with FFmpeg and MediaMTX - JoshooaJ" >
+      
+        <meta  name="twitter:description"  content="The personal blog of Josh Hendricks." >
+      
+        <meta  name="twitter:image"  content="https://www.joshooaj.com/assets/images/social/blog/posts/2025-02-14-Restreaming-RTSP-with-ffmpeg-and-mediamtx/index.png" >
+      
     
     
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -74,20 +142,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="alternate" type="application/rss+xml" title="Technical blog by joshooaj" href="https://www.joshooaj.com/feed_rss_created.xml">
 
-  
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Restreaming RTSP with FFmpeg and MediaMTX - JoshooaJ" />
-<meta property="og:description" content="The personal blog of Josh Hendricks." />
-<meta property="og:image" content="https://www.joshooaj.com/assets/images/social/blog/2025/02/19/restreaming-rtsp-with-ffmpeg-and-mediamtx/index.png" />
-<meta property="og:image:type" content="image/png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://www.joshooaj.com/blog/2025/02/19/restreaming-rtsp-with-ffmpeg-and-mediamtx/" />
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="Restreaming RTSP with FFmpeg and MediaMTX - JoshooaJ" />
-<meta property="twitter:description" content="The personal blog of Josh Hendricks." />
-<meta property="twitter:image" content="https://www.joshooaj.com/assets/images/social/blog/2025/02/19/restreaming-rtsp-with-ffmpeg-and-mediamtx/index.png" />
- <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -138,7 +193,7 @@
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
@@ -166,7 +221,7 @@
     <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9h-1.9M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69m-9.15 3.96h2.3L12 9l-1.15 3.65Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
       </label>
     
   
@@ -176,7 +231,7 @@
     <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
     
       <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -186,7 +241,7 @@
     <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
     
       <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
   
@@ -194,13 +249,13 @@
       
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
       <label class="md-header__button md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
@@ -209,21 +264,21 @@
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -240,7 +295,7 @@
         <a href="https://github.com/joshooaj/joshooaj.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     joshooaj/joshooaj.github.io
@@ -287,7 +342,7 @@
       <a href="https://github.com/joshooaj/joshooaj.github.io" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
   </div>
   <div class="md-source__repository">
     joshooaj/joshooaj.github.io
@@ -308,14 +363,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     Welcome
-  
-
     
   </span>
-  
   
 
       </a>
@@ -358,14 +408,9 @@
               
   
   <span class="md-ellipsis">
-    
-  
     Blog
-  
-
     
   </span>
-  
   
 
             </a>
@@ -380,11 +425,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Blog
-  
-
+            Blog
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -421,14 +462,9 @@
             
   
   <span class="md-ellipsis">
-    
-  
     Archive
-  
-
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -437,11 +473,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Archive
-  
-
+            Archive
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -458,14 +490,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     2025
-  
-
     
   </span>
-  
   
 
       </a>
@@ -487,14 +514,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     2024
-  
-
     
   </span>
-  
   
 
       </a>
@@ -516,14 +538,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     2023
-  
-
     
   </span>
-  
   
 
       </a>
@@ -545,14 +562,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     2022
-  
-
     
   </span>
-  
   
 
       </a>
@@ -622,14 +634,9 @@
             
   
   <span class="md-ellipsis">
-    
-  
     Categories
-  
-
     
   </span>
-  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -638,11 +645,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
-            
-  
-    Categories
-  
-
+            Categories
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -659,14 +662,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     .NET
-  
-
     
   </span>
-  
   
 
       </a>
@@ -688,14 +686,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     CI/CD
-  
-
     
   </span>
-  
   
 
       </a>
@@ -717,14 +710,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     C#
-  
-
     
   </span>
-  
   
 
       </a>
@@ -746,14 +734,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     Computer Vision
-  
-
     
   </span>
-  
   
 
       </a>
@@ -775,14 +758,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     Documentation
-  
-
     
   </span>
-  
   
 
       </a>
@@ -804,14 +782,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     GitHub Actions
-  
-
     
   </span>
-  
   
 
       </a>
@@ -833,14 +806,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     GitVersioning
-  
-
     
   </span>
-  
   
 
       </a>
@@ -862,14 +830,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     Homelab
-  
-
     
   </span>
-  
   
 
       </a>
@@ -891,14 +854,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     Markdown
-  
-
     
   </span>
-  
   
 
       </a>
@@ -920,14 +878,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     MkDocs
-  
-
     
   </span>
-  
   
 
       </a>
@@ -949,14 +902,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     PowerShell
-  
-
     
   </span>
-  
   
 
       </a>
@@ -978,14 +926,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     Usability
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1007,14 +950,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     Windows
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1036,14 +974,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     XProtect
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1065,14 +998,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     ffmpeg
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1107,14 +1035,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     MilestonePSTools
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1133,14 +1056,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     PSPushover
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1159,14 +1077,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     BGProcess
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1185,14 +1098,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     Docs Workshop
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1211,14 +1119,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     Buy Me a Coffee ☕️
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1257,9 +1160,7 @@
         <li class="md-nav__item">
   <a href="#troubleshooting" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Troubleshooting
-      
+      Troubleshooting
     </span>
   </a>
   
@@ -1268,9 +1169,7 @@
         <li class="md-nav__item">
   <a href="#media-router" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Media Router
-      
+      Media Router
     </span>
   </a>
   
@@ -1279,9 +1178,7 @@
         <li class="md-nav__item">
   <a href="#transcoding" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Transcoding
-      
+      Transcoding
     </span>
   </a>
   
@@ -1290,9 +1187,7 @@
         <li class="md-nav__item">
   <a href="#alternative-media-router" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Alternative media router
-      
+      Alternative media router
     </span>
   </a>
   
@@ -1301,9 +1196,7 @@
         <li class="md-nav__item">
   <a href="#final-thoughts" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Final thoughts
-      
+      Final thoughts
     </span>
   </a>
   
@@ -1326,7 +1219,7 @@
             <div class="md-post__back">
               <div class="md-nav__title md-nav__container">
                 <a href="../../../../" class="md-nav__link">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
                   <span class="md-ellipsis">
                     Back to index
                   </span>
@@ -1364,15 +1257,15 @@
                   <ul class="md-nav__list">
                     <li class="md-nav__item">
                       <div class="md-nav__link">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                        <time datetime="2025-02-19 00:00:00" class="md-ellipsis">February 19, 2025</time>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2025-02-19 00:00:00+00:00" class="md-ellipsis">February 19, 2025</time>
                       </div>
                     </li>
                     
                     
                       <li class="md-nav__item">
                         <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3H9m3 2 4 13 3-1-4-13-3 1M5 5v13h3V5H5M3 19v2h18v-2H3Z"/></svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
                           <span class="md-ellipsis">
                             in
                             
@@ -1385,7 +1278,7 @@
                       
                       <li class="md-nav__item">
                         <div class="md-nav__link">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
                               7 min read
@@ -1420,14 +1313,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     FFmpeg
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1446,14 +1334,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     MediaMTX
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1472,14 +1355,9 @@
         
   
   <span class="md-ellipsis">
-    
-  
     go2rtc
-  
-
     
   </span>
-  
   
 
       </a>
@@ -1509,10 +1387,10 @@
 
 
 <h1 id="restreaming-rtsp-with-ffmpeg-and-mediamtx">Restreaming RTSP with FFmpeg and MediaMTX<a class="headerlink" href="#restreaming-rtsp-with-ffmpeg-and-mediamtx" title="Permanent link">&para;</a></h1>
+<p><a class="glightbox" href="../../../../2025-02-14-Restreaming-RTSP-with-ffmpeg-and-mediamtx/ffmpeg-logo.svg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="ffmpeg logo" src="../../../../2025-02-14-Restreaming-RTSP-with-ffmpeg-and-mediamtx/ffmpeg-logo.svg" width="400" /></a></p>
 <p>If you've ever messed with IP cameras and RTSP video feeds, you might have run into a situation where VLC can access
 the stream without a problem, but the system meant to record that stream can't seem to do it. There's nothing more
 permanent than a temporary fix, so in this post I'll show you (and my future self) how to work around the issue.</p>
-<p><a class="glightbox" href="../../../../../assets/images/universal-driver-working.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="hero image" src="../../../../../assets/images/universal-driver-working.png" /></a></p>
 <!-- more -->
 
 <p>I am pulling an RTSP stream into XProtect, but there's nothing about this post that is exclusively for Milestone
@@ -1548,6 +1426,7 @@ quick search led me to the following FFmpeg command and arguments to "re-stream"
 <div class="highlight"><span class="filename">Using FFmpeg to syndicate an RTSP feed without transcoding</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ffmpeg -rtsp_transport tcp -i &quot;rtsp://username:password@10.10.10.10:8554/profile1&quot; -c:v copy -f rtsp rtsp://localhost:8554/profile1
 </span></code></pre></div>
 <h2 id="media-router">Media Router<a class="headerlink" href="#media-router" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="../../../../2025-02-14-Restreaming-RTSP-with-ffmpeg-and-mediamtx/mediamtx.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="MediaMTX logo" src="../../../../2025-02-14-Restreaming-RTSP-with-ffmpeg-and-mediamtx/mediamtx.png" /></a></p>
 <p>This <em>looked</em> like it was working, but I misunderstood what FFmpeg was actually doing. I expected that it was serving up
 the source stream using it's own local rtsp service on <code>rtsp://localhost:8554/</code> but that wasn't working for me. And when
 I ran <code>netstat</code> or <code>Get-NetTcpConnection</code> I couldn't see any evidence that there was anything listening on <code>localhost:8554</code>.</p>
@@ -1587,11 +1466,12 @@ h264, and that worked perfectly!</p>
 </span></code></pre></div>
 <p>Once I allowed FFmpeg to transcode from the source H.265 stream to H.264, XProtect was able to retrieve the stream and
 my camera was finally online in the <abbr title="Video Management System">VMS</abbr>.</p>
+<p><a class="glightbox" href="../../../../2025-02-14-Restreaming-RTSP-with-ffmpeg-and-mediamtx/universal-driver-working.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Screenshot of Management Client showing the universal driver working" src="../../../../2025-02-14-Restreaming-RTSP-with-ffmpeg-and-mediamtx/universal-driver-working.png" /></a></p>
 <h2 id="alternative-media-router">Alternative media router<a class="headerlink" href="#alternative-media-router" title="Permanent link">&para;</a></h2>
+<p><a class="glightbox" href="../../../../2025-02-14-Restreaming-RTSP-with-ffmpeg-and-mediamtx/go2rtc.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image representing the supported inputs and outputs for go2rtc" src="../../../../2025-02-14-Restreaming-RTSP-with-ffmpeg-and-mediamtx/go2rtc.png" /></a></p>
 <p>After sharing my experience with MediaMTX with one of my coworkers, he pointed out that he has had success with a tool
 called <a href="https://github.com/AlexxIT/go2rtc">go2rtc</a> in the past. I haven't used it yet, but based on a quick look at the
 GitHub repository, it may be a simpler, and potentially higher performance tool for the same job.</p>
-<p><a class="glightbox" href="../../../../2025-02-14-Restreaming-RTSP-with-ffmpeg-and-mediamtx/go2rtc.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Image representing the supported inputs and outputs for go2rtc" src="../../../../2025-02-14-Restreaming-RTSP-with-ffmpeg-and-mediamtx/go2rtc.png" /></a></p>
 <h2 id="final-thoughts">Final thoughts<a class="headerlink" href="#final-thoughts" title="Permanent link">&para;</a></h2>
 <p>This is by no means a recommended pattern for a production system. There are numerous issues here...</p>
 <ol>
@@ -1704,7 +1584,7 @@ the universal driver. Use it at your own risk!</p>
   
     Made with
     <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs Insiders
+      Material for MkDocs
     </a>
   
 </div>
@@ -1716,7 +1596,7 @@ the universal driver. Use it at your own risk!</p>
     
     
     <a href="/feed_rss_created.xml" target="_blank" rel="noopener" title="RSS Feed" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 64c0-17.7 14.3-32 32-32 229.8 0 416 186.2 416 416 0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96 14.3 96 0 81.7 0 64zm0 352a64 64 0 1 1 128 0 64 64 0 1 1-128 0zm32-256c159.1 0 288 128.9 288 288 0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224-17.7 0-32-14.3-32-32s14.3-32 32-32z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M0 64c0-17.7 14.3-32 32-32 229.8 0 416 186.2 416 416 0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96 14.3 96 0 81.7 0 64m0 352a64 64 0 1 1 128 0 64 64 0 1 1-128 0m32-256c159.1 0 288 128.9 288 288 0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224-17.7 0-32-14.3-32-32s14.3-32 32-32"/></svg>
     </a>
   
     
@@ -1724,7 +1604,7 @@ the universal driver. Use it at your own risk!</p>
     
     
     <a href="https://bsky.app/profile/joshooaj.com" target="_blank" rel="noopener" title="Josh on Bluesky" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M407.8 294.7c-3.3-.4-6.7-.8-10-1.3 3.4.4 6.7.9 10 1.3zM288 227.1c-26.1-50.7-97.1-145.2-163.1-191.8C61.6-9.4 37.5-1.7 21.6 5.5 3.3 13.8 0 41.9 0 58.4S9.1 194 15 213.9c19.5 65.7 89.1 87.9 153.2 80.7 3.3-.5 6.6-.9 10-1.4-3.3.5-6.6 1-10 1.4-93.9 14-177.3 48.2-67.9 169.9C220.6 589.1 265.1 437.8 288 361.1c22.9 76.7 49.2 222.5 185.6 103.4 102.4-103.4 28.1-156-65.8-169.9-3.3-.4-6.7-.8-10-1.3 3.4.4 6.7.9 10 1.3 64.1 7.1 133.6-15.1 153.2-80.7C566.9 194 576 75 576 58.4s-3.3-44.7-21.6-52.9c-15.8-7.1-40-14.9-103.2 29.8C385.1 81.9 314.1 176.4 288 227.1z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2 42.1-31.6 110.3-56 110.3 21.8 0 15.5-8.9 130.5-14.1 149.2-18.2 64.8-84.4 81.4-143.3 71.3C456 322 482.2 380 425.6 438c-107.4 110.2-154.3-27.6-166.3-62.9-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8c-12 35.3-59 173.1-166.3 62.9-56.5-58-30.4-116 72.5-133.5C100 314.6 33.8 298 15.7 233.1 10.4 214.4 1.5 99.4 1.5 83.9c0-77.8 68.2-53.4 110.3-21.8z"/></svg>
     </a>
   
     
@@ -1732,7 +1612,7 @@ the universal driver. Use it at your own risk!</p>
     
     
     <a href="https://www.linkedin.com/in/joshooaj" target="_blank" rel="noopener" title="Josh on LinkedIn" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
     </a>
   
     
@@ -1740,7 +1620,7 @@ the universal driver. Use it at your own risk!</p>
     
     
     <a href="https://github.com/joshooaj" target="_blank" rel="noopener" title="Josh on GitHub" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
     </a>
   
     
@@ -1748,7 +1628,7 @@ the universal driver. Use it at your own risk!</p>
     
     
     <a href="https://signal.me/#eu/c5pIBhxkru1zWIr6GP2vZkD3teusXme0pqCz3y9hALDfm8SRdPJC8LTkb4B846Rx" target="_blank" rel="noopener" title="Contact me on Signal" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m194.6 7.5 5.8 23.3C177.7 36.3 156 45.3 136 57.4l-12.3-20.6c22-13.3 45.9-23.2 70.9-29.3zm122.9 0-5.8 23.3c22.6 5.5 44.3 14.5 64.3 26.6l12.4-20.6c-22-13.3-46-23.2-71-29.3zM36.8 123.7c-13.3 22-23.2 45.9-29.3 70.9l23.3 5.8c5.5-22.7 14.5-44.4 26.6-64.4l-20.6-12.3zM24 256c0-11.6.9-23.3 2.6-34.8l-23.7-3.6c-3.8 25.4-3.8 51.3 0 76.7l23.7-3.6C24.9 279.3 24 267.6 24 256zm364.3 219.2L376 454.6c-20 12.1-41.6 21-64.2 26.6l5.8 23.3c24.9-6.2 48.8-16 70.8-29.3zM488 256c0 11.6-.9 23.3-2.6 34.8l23.7 3.6c3.8-25.4 3.8-51.3 0-76.7l-23.7 3.6c1.7 11.5 2.6 23.1 2.6 34.8zm16.5 61.4-23.3-5.8c-5.6 22.7-14.5 44.3-26.6 64.3l20.6 12.4c13.3-22 23.2-46 29.3-71zm-213.8 168c-23 3.5-46.5 3.5-69.5 0l-3.6 23.7c25.4 3.8 51.3 3.8 76.7 0l-3.6-23.7zm152-91.8c-13.8 18.7-30.4 35.3-49.2 49.1l14.2 19.3c20.7-15.2 39-33.4 54.2-54.1l-19.3-14.4zM393.6 69.2c18.8 13.8 35.3 30.4 49.2 49.2l19.3-14.4c-15.2-20.6-33.5-38.9-54.1-54.1l-14.4 19.3zM69.2 118.4C83 99.6 99.6 83.1 118.4 69.2L104 49.9C83.4 65.1 65.1 83.4 49.9 104l19.3 14.4zm406 5.3L454.6 136c12.1 20 21 41.6 26.6 64.2l23.3-5.8c-6.2-24.9-16-48.8-29.3-70.8zm-254-97.1c23-3.5 46.5-3.5 69.5 0l3.6-23.7c-25.4-3.9-51.2-3.9-76.7 0l3.6 23.7zM81.6 468.4 32 480l11.6-49.6-23.4-5.4-11.6 49.5c-.9 4-.8 8.1.3 12.1s3.2 7.5 6.1 10.4 6.5 5 10.4 6.1 8.1 1.2 12.1.3L87 492l-5.4-23.6zm-56.4-64.8 23.4 5.4 8-34.4c-11.7-19.6-20.4-40.8-25.8-63l-23.3 5.8c5.2 21.2 13.2 41.7 23.6 60.8l-5.9 25.3zm112 52-34.4 8 5.4 23.4 25.3-5.9c19.2 10.4 39.6 18.4 60.8 23.6l5.8-23.3c-22.1-5.5-43.3-14.3-62.8-26l-.2.2zM256 48c-37.2 0-73.6 10-105.6 28.9s-58.4 46-76.3 78.6-26.9 69.3-25.8 106.4 12 73.3 31.8 104.8L60 452l85.3-20c27.3 17.2 58.2 27.8 90.3 31s64.5-1.1 94.6-12.6 57.2-29.8 79-53.6 37.8-52.2 46.8-83.2 10.5-63.6 4.7-95.3-19-61.6-38.4-87.4-44.5-46.7-73.4-61S288.3 48 256 48z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M256 0c13.3 0 26.3 1 39.1 3l-3.7 23.7C279.9 24.9 268 24 256 24s-23.9.9-35.4 2.7L216.9 3c12.8-2 25.8-3 39.1-3m60.8 7.3-5.7 23.3c23.4 5.7 45.4 14.9 65.4 27.1L389 37.2c-22.1-13.4-46.4-23.6-72.2-29.9m90.5 42.2-14.2 19.3c19.1 14 36 30.9 50.1 50.1l19.4-14.2C447 83.6 428.4 65 407.3 49.5m67.5 73.6-20.5 12.5c12.2 20 21.4 42 27.1 65.4l23.3-5.7c-6.3-25.8-16.5-50.1-29.9-72.2m34.2 93.8-23.7 3.7c1.8 11.5 2.7 23.4 2.7 35.4s-.9 23.9-2.7 35.4l23.7 3.7c1.9-12.7 3-25.8 3-39.1s-1-26.3-3-39.1m-54.7 159.6c12.2-20 21.4-42 27.1-65.4l23.3 5.7c-6.3 25.8-16.5 50.1-29.9 72.2zm-11.1 16.6 19.4 14.2c-15.5 21.1-34.1 39.8-55.2 55.2l-14.2-19.4c19.1-14 36-30.9 50.1-50.1zm-66.7 61.2 12.5 20.5c-22.1 13.4-46.4 23.6-72.2 29.9l-5.7-23.3c23.4-5.7 45.4-14.9 65.4-27.1m-85.1 31 3.7 23.7c-12.7 1.9-25.8 3-39.1 3s-26.3-1-39.1-3l3.7-23.7c11.5 1.8 23.4 2.7 35.4 2.7s23.9-.9 35.4-2.7m-90.5-3.9-5.7 23.3c-19.4-4.7-37.9-11.6-55.3-20.5l-24.3 5.7-5.5-23.4 32.8-7.7 7.8 4c15.7 8 32.5 14.3 50.1 18.6zM90 471.3l5.5 23.4-41.6 9.7C26 510.8 1.2 486 7.6 458.2l9.7-41.6 23.4 5.4-9.7 41.7c-2.4 10.4 6.9 19.7 17.3 17.3zm-44.5-69.5-23.4-5.5 5.7-24.3c-8.9-17.3-15.8-35.9-20.5-55.3l23.3-5.7c4.3 17.6 10.6 34.4 18.6 50.1l4 7.8-7.7 32.8zM26.7 291.4 3 295.1c-2-12.8-3-25.8-3-39.1s1-26.3 3-39.1l23.7 3.7C24.9 232.1 24 244 24 256s.9 23.9 2.7 35.4m3.9-90.5-23.3-5.7c6.3-25.8 16.5-50.1 29.9-72.2l20.5 12.5c-12.2 20-21.4 42-27.1 65.4m38.3-82.1-19.4-14.1C65 83.6 83.6 65 104.7 49.5l14.2 19.4c-19.1 14-36 30.9-50.1 50.1zm66.7-61.2-12.5-20.4c22.1-13.4 46.4-23.6 72.2-29.9l5.7 23.3c-23.4 5.7-45.4 14.9-65.4 27.1zM464 256c0 114.9-93.1 208-208 208-36.4 0-70.7-9.4-100.5-25.8-2.9-1.6-6.2-2.1-9.4-1.4l-92.5 21.6 21.6-92.5c.7-3.2.2-6.5-1.4-9.4C57.4 326.7 48 292.4 48 256c0-114.9 93.1-208 208-208s208 93.1 208 208"/></svg>
     </a>
   
 </div>
@@ -1763,85 +1643,17 @@ the universal driver. Use it at your own risk!</p>
     </div>
     
     
-      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
-        <div class="md-consent__overlay"></div>
-        <aside class="md-consent__inner">
-          <form class="md-consent__form md-grid md-typeset" name="consent">
-            
-
-  
-
-
-  
-
-
-
-  
-
-
-<h4>Cookie consent</h4>
-<p>I use a self-hosted instance of <a href="https://plausible.io/">Plausible</a> as an alternative to Google Analytics to track page views. This is helpful for me to gauge interest and reach, but I get it - cookie consent and analytics are annoying. Feel free to decline, I know I always do! :)</p>
-<input class="md-toggle" type="checkbox" id="__settings" >
-<div class="md-consent__settings">
-  <ul class="task-list">
-    
-      
-      
-        
-        
-      
-      <li class="task-list-item">
-        <label class="task-list-control">
-          <input type="checkbox" name="analytics" checked>
-          <span class="task-list-indicator"></span>
-          Plausible
-        </label>
-      </li>
-    
-      
-      
-        
-        
-      
-      <li class="task-list-item">
-        <label class="task-list-control">
-          <input type="checkbox" name="github" checked>
-          <span class="task-list-indicator"></span>
-          GitHub
-        </label>
-      </li>
-    
-  </ul>
-</div>
-<div class="md-consent__controls">
-  
-    
-      <button class="md-button md-button--primary">Accept</button>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["header.autohide", "content.code.annotate", "content.code.copy", "navigation.indexes"], "search": "../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-    
-  
-    
-    
-    
-      <label class="md-button" for="__settings">Manage settings</label>
-    
-  
-</div>
-          </form>
-        </aside>
-      </div>
-      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
-    
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["header.autohide", "content.code.annotate", "content.code.copy", "navigation.indexes"], "search": "../../../../../assets/javascripts/workers/search.1e90e0fb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
-    
-    
-      <script src="../../../../../assets/javascripts/bundle.13690f9d.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
         <script src="../../../../../scripts/lasttrack.js"></script>
       
         <script src="../../../../../scripts/consent.js"></script>
       
     
-  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 </html>
