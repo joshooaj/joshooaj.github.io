@@ -6,9 +6,11 @@ on:
 jobs:
   Publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+
     if: github.event.repository.fork == false
-    env:
-      GHCR_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - uses: actions/checkout@v4
         with:
