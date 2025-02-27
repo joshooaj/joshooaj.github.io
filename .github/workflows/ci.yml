@@ -6,9 +6,6 @@ on:
 jobs:
   Publish:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write
 
     if: github.event.repository.fork == false
     steps:
@@ -23,4 +20,4 @@ jobs:
         shell: pwsh
         run: .\build.ps1 -Task Publish
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
