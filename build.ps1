@@ -6,20 +6,21 @@ param(
     $Task = 'Serve'
 )
 
-if (Test-Path $PSScriptRoot/gists.json) {
-    $gists = Get-Content $PSScriptRoot/gists.json | ConvertFrom-Json
-    foreach ($gist in $gists) {
-        foreach ($file in $gist.files) {
-            $filePath = [io.path]::Combine($PSScriptRoot, 'docs', 'gists', $file)
-            if (Test-Path $filePath) {
-                Write-Host "Gist already downloaded: $filePath"
-                continue
-            }
-            Write-Host "Saving gist contents to $filePath"
-            gh gist view $gist.id -f $file | Set-Content -Path $filePath
-        }
-    }
-}
+# TODO: Fix GH_TOKEN permissions issues in CI resulting in 403 errors
+# if (Test-Path $PSScriptRoot/gists.json) {
+#     $gists = Get-Content $PSScriptRoot/gists.json | ConvertFrom-Json
+#     foreach ($gist in $gists) {
+#         foreach ($file in $gist.files) {
+#             $filePath = [io.path]::Combine($PSScriptRoot, 'docs', 'gists', $file)
+#             if (Test-Path $filePath) {
+#                 Write-Host "Gist already downloaded: $filePath"
+#                 continue
+#             }
+#             Write-Host "Saving gist contents to $filePath"
+#             gh gist view $gist.id -f $file | Set-Content -Path $filePath
+#         }
+#     }
+# }
 
 switch ($Task) {
     'Serve' {
