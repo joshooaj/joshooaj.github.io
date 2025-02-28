@@ -1,5 +1,4 @@
 ---
-draft: true
 date:
   created: 2025-02-27
 authors:
@@ -8,7 +7,7 @@ categories:
   - PowerShell
 
 links:
-  - Text: https://link
+  - Windows Time Service: https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings
 ---
 
 # Got the time?
