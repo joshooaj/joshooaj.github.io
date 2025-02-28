@@ -41,8 +41,8 @@ that can do most things for you.
 
 ![Screenshot of w32tm command output](w32tm-query-source.png)
 
-```plaintext
-w32tm.exe /query /source
+```plaintext title="Query the current source"
+w32tm /query /source
 ```
 
 This will return your configured time source. In my case it returns "pool.ntp.org" and sometimes "time.windows.com" since
@@ -52,7 +52,7 @@ of them - presumably the last-used server address.
 You can pull this setting from the registry using the `Get-ItemPropertyValue` command below. Note that your registry
 value may be appended with ",0x9" or ",0x8" and right now I'm just not curious enough to find out what that means.
 
-```powershell
+```powershell title="Retrieve the current source(s) from the registry"
 (Get-ItemPropertyValue -Path HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\Parameters -Name NtpServer) -split ' '
 ```
 
@@ -60,7 +60,7 @@ value may be appended with ",0x9" or ",0x8" and right now I'm just not curious e
 
 ![Screenshot of w32tm command output](w32tm-update-source.png)
 
-```plaintext
+```plaintext title="Set the time source(s) and enable automatic updates"
 w32tm /config /update /syncfromflags:MANUAL /manualpeerlist:"pool.ntp.org time.windows.com"
 ```
 
@@ -86,7 +86,7 @@ Unfortunately it doesn't look like the `w32tm.exe` tool allows you to turn on th
 this with a couple of registry changes and a restart of the `W32Time` service to apply the changes. Don't forget to open
 UDP port 123 in your firewall to allow incoming connections.
 
-```powershell
+```powershell title="Enable NtpServer feature" linenums="1"
 # Note: The AnnounceFlags value of 5 is a bitwise OR of 1 (Timeserv_Announce_Yes) and 5 (Reliable_Timeserv_Announce_Yes)
 Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer -Name Enabled -Value 1
 Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\Config -Name AnnounceFlags -Value 5

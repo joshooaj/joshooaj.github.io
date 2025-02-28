@@ -9,8 +9,11 @@
 *[IIS]: Internet Information Services, a Microsoft-developed web server
 *[MIP SDK]: Milestone Integration Platform Software Development Kit
 *[MIP]: Milestone Integration Platform
+*[NTP]: Network Time Protocol (UDP 123)
 *[SDK]: Software Development Kit
 *[SLC]: Software License Code
+*[TCP]: Transmission Control Protocol
+*[UDP]: User Datagram Protocol
 *[UI]: Graphical User Interface
 *[UX]: User Experience
 *[VMS]: Video Management System
