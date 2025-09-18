@@ -2,154 +2,162 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://www.joshooaj.com/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/abbreviations/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/2023/09/06/debugging-convertto-json/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/2024/03/21/new-pspushover-powershell-module/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/2024/03/24/image-comparison/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/2024/03/25/but-i-am-the-administrator/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/2024/05/12/serving-a-web-api-with-pode/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/2024/08/02/nerdbankgitversioning-and-the-revision-number/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/2024/12/30/why-i-never-learned-bash/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/2025/02/19/restreaming-rtsp-with-ffmpeg-and-mediamtx/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/2025/02/27/got-the-time/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://www.joshooaj.com/blog/2025/09/18/the-collapse-of-freedom-of-speech-in-real-time/</loc>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/2022/12/07/your-users-deserve-argument-completers/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/2022/12/21/argument-transformation-attributes/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/2023/10/02/generate-markdown-tables-from-powershell/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/2023/10/12/parse-code-from-markdown-files/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/2022/01/04/securely-reading-passwords-from-the-console/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/archive/2025/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/archive/2024/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/archive/2023/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/archive/2022/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
+    </url>
+    <url>
+         <loc>https://www.joshooaj.com/blog/category/politics/</loc>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/category/powershell/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/category/ffmpeg/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/category/xprotect/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/category/net/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/category/gitversioning/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/category/homelab/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/category/mkdocs/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/category/windows/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/category/computer-vision/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/category/documentation/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/category/github-actions/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/category/cicd/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/category/markdown/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/category/usability/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/category/c/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/page/2/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
     <url>
          <loc>https://www.joshooaj.com/blog/category/powershell/page/2/</loc>
-         <lastmod>2025-02-28</lastmod>
+         <lastmod>2025-09-18</lastmod>
     </url>
 </urlset>
